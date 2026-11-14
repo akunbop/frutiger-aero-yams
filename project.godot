@@ -16,13 +16,15 @@ config/icon="res://icon.svg"
 
 [display]
 
+window/size/viewport_width=1024
+window/size/viewport_height=512
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
 [file_customization]
 
 folder_colors={
-"res://assets/": "orange",
+"res://assets/": "blue",
 "res://assets/sounds/": "green",
 "res://scenes/": "pink",
 "res://scripts/": "purple"
