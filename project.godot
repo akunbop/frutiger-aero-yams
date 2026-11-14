@@ -33,6 +33,7 @@ folder_colors={
 [physics]
 
 3d/physics_engine="Rapier3D"
+rapier/fluid/fluid_particle_radius_3d=0.05
 
 [rendering]
 
