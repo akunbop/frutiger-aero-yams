@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://dfc37y732dmlg"]
+
+[ext_resource type="Script" uid="uid://ckooo2esidf5o" path="res://scripts/main_3d.gd" id="1_wy5hg"]
+[ext_resource type="PackedScene" uid="uid://ctdnyvbhiuxuq" path="res://assets/desk_deformed.glb" id="2_j458m"]
+
+[node name="TheBar" type="Node3D" unique_id=1314994347]
+script = ExtResource("1_wy5hg")
+station = [NodePath("Stations/GlasStation"), NodePath("Stations/FluidStation"), NodePath("Stations/MixerStation"), NodePath("Stations/ToppingStation"), NodePath("Stations/DekoStation")]
+
+[node name="desk_deformed" parent="." unique_id=1990497689 instance=ExtResource("2_j458m")]
+
+[node name="Stations" type="Node3D" parent="." unique_id=764851755]
+
+[node name="GlasStation" type="Node3D" parent="Stations" unique_id=1608115653]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 2, -1)
+
+[node name="FluidStation" type="Node3D" parent="Stations" unique_id=1465352703]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2, -0.5)
+
+[node name="MixerStation" type="Node3D" parent="Stations" unique_id=1891328007]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00044608116, 2, 0)
+
+[node name="ToppingStation" type="Node3D" parent="Stations" unique_id=2024036385]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 2, -0.5)
+
+[node name="DekoStation" type="Node3D" parent="Stations" unique_id=2038660036]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 2, -1)
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1499797840]
+transform = Transform3D(-1, 9.206404e-16, -8.742278e-08, -2.1122949e-08, 0.97037137, 0.2416184, 8.483256e-08, 0.2416184, -0.97037137, 0, 4.6045, -4.6973996)
