@@ -1,0 +1,25 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://kpsh57o1rf2l"]
+
+[ext_resource type="Texture2D" uid="uid://bw3ktiascbijs" path="res://assets/materials/frutiger_aero.png" id="1_7wj4v"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_7rgfq"]
+offset = Vector3(19.05, 0, 0)
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_qc7ip"]
+noise = SubResource("FastNoiseLite_7rgfq")
+in_3d_space = true
+
+[resource]
+blend_mode = 1
+albedo_texture = ExtResource("1_7wj4v")
+metallic_specular = 1.0
+roughness = 0.34
+roughness_texture = SubResource("NoiseTexture2D_qc7ip")
+rim_enabled = true
+rim = 0.63
+rim_tint = 0.16
+clearcoat = 0.04
+clearcoat_roughness = 0.14
+subsurf_scatter_strength = 0.1
+refraction_enabled = true
+grow_amount = -1.109
