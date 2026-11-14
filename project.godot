@@ -32,7 +32,7 @@ folder_colors={
 
 [physics]
 
-3d/physics_engine="Jolt Physics"
+3d/physics_engine="Rapier3D"
 
 [rendering]
 

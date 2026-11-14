@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://wrq7oko061p8"]
+
+[ext_resource type="Script" uid="uid://b5of3xx28r0r3" path="res://addons/godot-rapier3d/fluid_3d_renderer.gd" id="1_cvepl"]
+[ext_resource type="Shader" uid="uid://7uvyt47x5i3f" path="res://shaders/glassui.gdshader" id="2_0va8q"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_0va8q"]
+radius = 0.1
+height = 0.2
+
+[sub_resource type="MultiMesh" id="MultiMesh_dbp7g"]
+transform_format = 1
+use_colors = true
+instance_count = 10
+mesh = SubResource("SphereMesh_0va8q")
+buffer = PackedFloat32Array(1, 0, 0, 0.675, 0, 1, 0, 0.17, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0.3, 0, 1, 0, 0.43, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0.17, 0, 1, 0, 0, 0, 0, 1, 0.305, 0, 0, 0, 0, 1, 0, 0, 0.35, 0, 1, 0, 0.075, 0, 0, 1, -0.3, 0, 0, 0, 0, 1, 0, 0, -0.03, 0, 1, 0, 0.15, 0, 0, 1, 0.09, 0, 0, 0, 0, 1, 0, 0, -0.235, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, -0.01, 0, 1, 0, 0.26, 0, 0, 1, -0.305, 0, 0, 0, 0, 1, 0, 0, 0.76, 0, 1, 0, 0, 0, 0, 1, 0.245, 0, 0, 0, 0, 1, 0, 0, 0.185, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0.45, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cvepl"]
+shader = ExtResource("2_0va8q")
+shader_parameter/brightness = 0.1
+shader_parameter/chromatic_shift_amount = 1.0
+shader_parameter/bend_amount = 0.4
+shader_parameter/blur_amount = 2.0
+shader_parameter/grain_amount = 0.05
+shader_parameter/curve_light_blend = 0.5
+shader_parameter/rim_light_blend = 0.8
+shader_parameter/shadow_color = Color(0, 0, 0, 1)
+
+[node name="Fluid" type="Node3D" unique_id=1687291188]
+
+[node name="Fluid3DRenderer" type="MultiMeshInstance3D" parent="." unique_id=638384460 node_paths=PackedStringArray("fluid")]
+multimesh = SubResource("MultiMesh_dbp7g")
+script = ExtResource("1_cvepl")
+fluid = NodePath("../Fluid3D")
+metadata/_custom_type_script = "uid://b5of3xx28r0r3"
+
+[node name="Fluid3D" type="Fluid3D" parent="." unique_id=1855921758]
+effects = Array[Resource]([SubResource("ShaderMaterial_cvepl")])
+points = PackedVector3Array(0.675, 0.17, 0, 0.3, 0.43, 0, 0.17, 0, 0.305, 0.35, 0.075, -0.3, -0.03, 0.15, 0.09, -0.235, 0, 0, -0.01, 0.26, -0.305, 0.76, 0, 0.245, 0.185, 0, 0, 0.45, 0, 0)
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1420106374]
+transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 0, 1, 1)
