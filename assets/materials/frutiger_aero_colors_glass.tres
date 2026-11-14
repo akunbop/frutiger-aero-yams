@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bw3ktiascbijs" path="res://assets/materials/frutiger_aero.png" id="1_7wj4v"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_7rgfq"]
+frequency = 0.0312
 offset = Vector3(19.05, 0, 0)
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_qc7ip"]
