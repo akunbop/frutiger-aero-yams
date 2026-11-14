@@ -19,6 +19,15 @@ config/icon="res://icon.svg"
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
+[file_customization]
+
+folder_colors={
+"res://assets/": "orange",
+"res://assets/sounds/": "green",
+"res://scenes/": "pink",
+"res://scripts/": "purple"
+}
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
