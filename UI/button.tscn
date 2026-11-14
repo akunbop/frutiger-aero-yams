@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://dk7x2u2h1owki"]
+
+[ext_resource type="Shader" uid="uid://7uvyt47x5i3f" path="res://shaders/glassui.gdshader" id="1_1tho2"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_u2e7o"]
+shader = ExtResource("1_1tho2")
+shader_parameter/brightness = 0.1
+shader_parameter/chromatic_shift_amount = 0.499999988824
+shader_parameter/bend_amount = 0.2500000037253
+shader_parameter/blur_amount = 0.0
+shader_parameter/grain_amount = 0.0
+shader_parameter/curve_light_blend = 0.5
+shader_parameter/rim_light_blend = 0.8
+shader_parameter/shadow_color = Color(0, 0, 0, 1)
+
+[node name="Button" type="Control" unique_id=1847032416]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 3.0
+offset_right = 2.0
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="." unique_id=1615950910]
+modulate = Color(6.840123, 6.840123, 6.840123, 1)
+material = SubResource("ShaderMaterial_u2e7o")
+layout_mode = 0
+offset_left = -1.0
+offset_top = 1.0
+offset_right = 97.0
+offset_bottom = 44.0
