@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cvaci3aa0gdyc"]
+
+[ext_resource type="PackedScene" uid="uid://ctdnyvbhiuxuq" path="res://assets/desk_deformed.glb" id="1_nh2gr"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nh2gr"]
+albedo_color = Color(5.968213e-06, 0.5705336, 0.5706569, 1)
+roughness = 0.0
+rim_enabled = true
+clearcoat_enabled = true
+clearcoat_roughness = 0.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4gh8s"]
+metallic_specular = 0.0
+roughness = 0.0
+
+[node name="desk_deformed" unique_id=1216616939 instance=ExtResource("1_nh2gr")]
+
+[node name="Cube_003" parent="." index="0" unique_id=945709281]
+surface_material_override/0 = SubResource("StandardMaterial3D_nh2gr")
+surface_material_override/1 = SubResource("StandardMaterial3D_4gh8s")
