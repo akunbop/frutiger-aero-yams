@@ -41,7 +41,7 @@ script = ExtResource("1_eifxg")
 fluid_renderer = NodePath("Fluid3DRenderer")
 
 [node name="Fluid3DRenderer" type="MultiMeshInstance3D" parent="." unique_id=1569391493 node_paths=PackedStringArray("fluid")]
-transform = Transform3D(1.9999999, 0, 0, 0, 1.9999999, 0, 0, 0, 1.9999999, -0.3245194, 1.250918, -0.30018434)
+transform = Transform3D(1.9999999, 0, 0, 0, 1.9999999, 0, 0, 0, 1.9999999, 0.008029699, 1.250918, -0.02998814)
 multimesh = SubResource("MultiMesh_wotrh")
 script = ExtResource("1_op2hx")
 fluid = NodePath("../Fluid3D")
@@ -53,6 +53,6 @@ effects = Array[Resource]([SubResource("FluidEffect3DViscosityArtificial_dbp7g")
 points = PackedVector3Array(0, 0, 0, 0.05, 0, 0, 0.1, 0, 0, 0.15, 0, 0, 0.2, 0, 0, 0, 0.05, 0, 0.05, 0.05, 0, 0.1, 0.05, 0, 0.15, 0.05, 0, 0.2, 0.05, 0, 0, 0.1, 0, 0.05, 0.1, 0, 0.1, 0.1, 0, 0.15, 0.1, 0, 0.2, 0.1, 0)
 transform = Transform3D(1.9999999, 0, 0, 0, 1.9999999, 0, 0, 0, 1.9999999, -0.028047249, -0.76642656, -0.30018434)
 script = ExtResource("2_eifxg")
-height = 20
-width = 5
-depth = 5
+height = 30
+width = 2
+depth = 2
