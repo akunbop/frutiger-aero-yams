@@ -14,12 +14,14 @@
 [ext_resource type="PackedScene" uid="uid://cul0rschwowlf" path="res://scenes/blender scenes/window_support.tscn" id="9_vfrn5"]
 [ext_resource type="Script" uid="uid://c6mt5iyldrwjm" path="res://scripts/glas_dispenser.gd" id="13_jxwrd"]
 [ext_resource type="Script" uid="uid://dmbk7q1kd1r8n" path="res://scenes/area_3d.gd" id="13_spkk5"]
-[ext_resource type="Script" uid="uid://bj1lct1xewos5" path="res://scripts/dispenser_script.gd" id="13_w68ji"]
 [ext_resource type="ArrayMesh" uid="uid://dus7rxqi7ntmm" path="res://assets/objects/topping_glb_scene/goldfisch_Cube_003.res" id="14_3j2fx"]
 [ext_resource type="Script" uid="uid://dpoitmmix53r4" path="res://scripts/topping_dispenser.gd" id="14_23wr2"]
 [ext_resource type="Material" uid="uid://ddad6e6sowp31" path="res://assets/materials/black_boba_material.tres" id="15_3j2fx"]
+[ext_resource type="Script" uid="uid://m717q4p13nwt" path="res://scripts/fluid_dispenser.gd" id="15_yggoe"]
+[ext_resource type="Script" uid="uid://com6vicu8otfb" path="res://scripts/syrup_dispenser.gd" id="16_2ulci"]
 [ext_resource type="ArrayMesh" uid="uid://di53jgymlamet" path="res://assets/objects/topping_glb_scene/ice_cube_Cube_002.res" id="16_dynfe"]
 [ext_resource type="PackedScene" uid="uid://cmh4esnqplfp4" path="res://assets/frutiger_person.tscn" id="18_katsu"]
+[ext_resource type="Script" uid="uid://c7o4dftukyn1m" path="res://scripts/deco_dispenser.gd" id="21_2ulci"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_katsu"]
 sky_top_color = Color(0, 0.7490196, 1, 1)
@@ -221,15 +223,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.8, 4, -1.105)
 script = ExtResource("13_jxwrd")
 metadata/_custom_type_script = "uid://c6mt5iyldrwjm"
 
-[node name="FluidDispenser" type="Node3D" parent="Dispensers" unique_id=1110034899]
+[node name="FluidDispenser" type="Node3D" parent="Dispensers" unique_id=1966905054]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 3, -0.268)
-script = ExtResource("13_w68ji")
-metadata/_custom_type_script = "uid://bj1lct1xewos5"
+script = ExtResource("15_yggoe")
+metadata/_custom_type_script = "uid://m717q4p13nwt"
 
-[node name="SyrupDispenser" type="Node3D" parent="Dispensers" unique_id=1560348993]
+[node name="SyrupDispenser" type="Node3D" parent="Dispensers" unique_id=1076431496]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
-script = ExtResource("13_w68ji")
-metadata/_custom_type_script = "uid://bj1lct1xewos5"
+script = ExtResource("16_2ulci")
+metadata/_custom_type_script = "uid://com6vicu8otfb"
 
 [node name="ToppingDispenser" type="Node3D" parent="Dispensers" unique_id=926626877]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 5, -0.26)
@@ -243,10 +245,10 @@ boba = SubResource("SphereMesh_x4pa0")
 icecubes = ExtResource("16_dynfe")
 metadata/_custom_type_script = "uid://dpoitmmix53r4"
 
-[node name="DecoDispenser" type="Node3D" parent="Dispensers" unique_id=1067442463]
+[node name="DecoDispenser" type="Node3D" parent="Dispensers" unique_id=1396798003]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8, 3, -1.1)
-script = ExtResource("13_w68ji")
-metadata/_custom_type_script = "uid://bj1lct1xewos5"
+script = ExtResource("21_2ulci")
+metadata/_custom_type_script = "uid://c7o4dftukyn1m"
 
 [node name="FrutigerPerson" parent="." unique_id=1934764386 instance=ExtResource("18_katsu")]
 transform = Transform3D(-0.0012773708, 0, 0.99999917, 0, 1, 0, -0.99999917, 0, -0.0012773708, 0.09910327, 2.4449487, 1.9679179)
