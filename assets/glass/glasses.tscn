@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://lso8cpd3baxk"]
+
+[ext_resource type="PackedScene" uid="uid://b178ob1l573ca" path="res://assets/glass/bubble_glass.tscn" id="1_hux05"]
+[ext_resource type="PackedScene" uid="uid://dvi4vfkyr40jw" path="res://assets/glass/lavalamp_glass.tscn" id="2_fi8c6"]
+[ext_resource type="PackedScene" uid="uid://bssq1mfpvndot" path="res://assets/glass/normal_glass.tscn" id="3_g3fj0"]
+[ext_resource type="PackedScene" uid="uid://d3bw4walbcy1v" path="res://assets/glass/wonky_glass.tscn" id="4_d8bv4"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h3j13"]
+transparency = 1
+blend_mode = 1
+cull_mode = 1
+depth_draw_mode = 1
+albedo_color = Color(0, 1, 1, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_u2e7o"]
+material = SubResource("StandardMaterial3D_h3j13")
+top_radius = 0.15
+bottom_radius = 0.15
+height = 0.15
+
+[node name="Glasses" type="Node3D" unique_id=1818178133]
+
+[node name="bubble_glass" parent="." unique_id=1588051643 instance=ExtResource("1_hux05")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 1.0945314, 0, 0)
+
+[node name="lavalamp_glass" parent="." unique_id=1627487390 instance=ExtResource("2_fi8c6")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0.5485903, 0, 0)
+
+[node name="normal_glass" parent="." unique_id=1593314999 instance=ExtResource("3_g3fj0")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -0.5220814, 0, 0)
+
+[node name="wonky_glass" parent="." unique_id=1294920463 instance=ExtResource("4_d8bv4")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1233941979]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=1688307683]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.104, -0.008567803)
+mesh = SubResource("CylinderMesh_u2e7o")
