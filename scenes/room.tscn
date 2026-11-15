@@ -67,13 +67,14 @@ material = ExtResource("15_3j2fx")
 radius = 0.05
 height = 0.1
 
-[node name="Node3D" type="Node3D" unique_id=1832449439 node_paths=PackedStringArray("glas_dispenser", "fluid_dispenser", "syrup_dispenser", "topping_dispenser", "deco_dispenser")]
+[node name="Node3D" type="Node3D" unique_id=1832449439 node_paths=PackedStringArray("glas_dispenser", "fluid_dispenser", "syrup_dispenser", "topping_dispenser", "deco_dispenser", "belts")]
 script = ExtResource("1_eom3m")
 glas_dispenser = NodePath("Dispensers/GlasDispenser")
 fluid_dispenser = NodePath("Dispensers/FluidDispenser")
 syrup_dispenser = NodePath("Dispensers/SyrupDispenser")
 topping_dispenser = NodePath("Dispensers/ToppingDispenser")
 deco_dispenser = NodePath("Dispensers/DecoDispenser")
+belts = [NodePath("Stations/GlasStation/Area3D"), NodePath("Stations/FluidStation/Area3D"), NodePath("Stations/MixerStation/Area3D"), NodePath("Stations/ToppingStation/Area3D"), NodePath("Stations/DekoStation/Area3D")]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1796354092]
 environment = SubResource("Environment_jxwrd")

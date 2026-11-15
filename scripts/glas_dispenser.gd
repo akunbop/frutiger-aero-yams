@@ -39,6 +39,5 @@ func _unhandled_input(event: InputEvent) -> void:
 		set_dispenser_type(GlasType.BUBBLE)
 
 func dispense():
-	super.dispense()
 	var instance = current_glas.instantiate()
 	add_child(instance)
