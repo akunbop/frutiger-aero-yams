@@ -46,6 +46,17 @@ _subresources={
 "use_external/fallback_path": "res://assets/materials/frutiger_aero_colors_glass.tres",
 "use_external/path": "uid://kpsh57o1rf2l"
 }
+},
+"meshes": {
+"normal_glass_no_col_Circle_003": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://scenes/glas_mesh/normal_glass_no_col_Circle_003.res",
+"save_to_file/path": "uid://duwflix611nwh"
+}
 }
 }
 gltf/naming_version=2

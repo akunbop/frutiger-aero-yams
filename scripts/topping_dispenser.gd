@@ -6,11 +6,13 @@ class_name ToppingDispenser
 @export var boba : Mesh
 @export var icecubes: Mesh
 @export var lava : Mesh
+
 enum DispenserType {GOLD_FISH, BOBA, ICECUBES, LAVA}
 var _type : DispenserType = DispenserType.GOLD_FISH
 var current_mesh : Mesh = gold_fish
 
 func _ready() -> void:
+	print("dispenser script ready: ", name)
 	set_dispenser_type(DispenserType.GOLD_FISH)
 
 func set_dispenser_type(new_type : DispenserType):
@@ -26,8 +28,14 @@ func set_dispenser_type(new_type : DispenserType):
 		DispenserType.LAVA:
 			current_mesh = lava
 
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("test"):
+		print("test action fired")
+
 func _unhandled_input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("test"):
+		print("key: ", event.as_text(), " keycode: ", event.keycode)
+		print("pressed F12")
 		set_dispenser_type(DispenserType.BOBA)
 		dispense()
 	if Input.is_action_just_pressed("test2"):

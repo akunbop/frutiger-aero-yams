@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cu843s2h4qd2y"]
+
+[ext_resource type="Script" uid="uid://biv5gpq46pxiq" path="res://addons/godot-rapier3d/custom_nodes/rapier_rigid_body_3d.gd" id="1_e3wkf"]
+[ext_resource type="ArrayMesh" uid="uid://cnd7p0emi6mms" path="res://scenes/glas_mesh/bubble_glass_no_col_Torus.res" id="3_vblxs"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_pje5a"]
+height = 0.16000001
+radius = 0.03547484
+
+[node name="BubbleGlassRigid" type="RigidBody3D" unique_id=1703852550]
+script = ExtResource("1_e3wkf")
+metadata/_custom_type_script = "uid://biv5gpq46pxiq"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1120377375]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+mesh = ExtResource("3_vblxs")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1931677595]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0.243898, 0)
+shape = SubResource("CylinderShape3D_pje5a")
