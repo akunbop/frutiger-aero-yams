@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://dvi4vfkyr40jw"]
+
+[ext_resource type="PackedScene" uid="uid://e6fn1ji1u67l" path="res://assets/glass/lavalamp_glass.glb" id="1_ocipg"]
+
+[node name="lavalamp_glass" unique_id=1627487390 instance=ExtResource("1_ocipg")]

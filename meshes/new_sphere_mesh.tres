@@ -1,0 +1,18 @@
+[gd_resource type="SphereMesh" format=3 uid="uid://6k2q7o33u8v4"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hnv2w"]
+transparency = 2
+alpha_scissor_threshold = 1.0
+alpha_antialiasing_mode = 0
+blend_mode = 1
+albedo_color = Color(0, 0, 1, 1)
+roughness = 0.1
+subsurf_scatter_enabled = true
+subsurf_scatter_strength = 0.1
+refraction_enabled = true
+refraction_scale = 0.02
+
+[resource]
+material = SubResource("StandardMaterial3D_hnv2w")
+radius = 0.025
+height = 0.05
