@@ -1,0 +1,31 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dbhxc30jkw0rw"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_qc7ip"]
+frequency = 0.0072
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_dmixe"]
+noise = SubResource("FastNoiseLite_qc7ip")
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_7rgfq"]
+frequency = 0.0312
+offset = Vector3(19.05, 0, 0)
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_qc7ip"]
+noise = SubResource("FastNoiseLite_7rgfq")
+in_3d_space = true
+
+[resource]
+transparency = 1
+cull_mode = 2
+albedo_color = Color(0.76862746, 0.6862745, 0.77254903, 1)
+metallic_specular = 1.0
+roughness_texture = SubResource("NoiseTexture2D_qc7ip")
+normal_texture = SubResource("NoiseTexture2D_dmixe")
+rim_enabled = true
+rim = 0.63
+rim_tint = 0.16
+clearcoat = 0.04
+clearcoat_roughness = 0.14
+subsurf_scatter_strength = 0.1
+uv1_triplanar_sharpness = 2.928172
+grow_amount = -1.109

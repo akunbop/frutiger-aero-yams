@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://lmsskqet43wn" path="res://scenes/blender scenes/front_panel.tscn" id="7_3j2fx"]
 [ext_resource type="PackedScene" uid="uid://dq65t5eeuwwfq" path="res://scenes/blender scenes/side_panel.tscn" id="8_dynfe"]
 [ext_resource type="PackedScene" uid="uid://cul0rschwowlf" path="res://scenes/blender scenes/window_support.tscn" id="9_vfrn5"]
+[ext_resource type="Script" uid="uid://c6mt5iyldrwjm" path="res://scripts/glas_dispenser.gd" id="13_jxwrd"]
 [ext_resource type="Script" uid="uid://bj1lct1xewos5" path="res://scripts/dispenser_script.gd" id="13_w68ji"]
 [ext_resource type="ArrayMesh" uid="uid://dus7rxqi7ntmm" path="res://assets/objects/topping_glb_scene/goldfisch_Cube_003.res" id="14_3j2fx"]
 [ext_resource type="Script" uid="uid://dpoitmmix53r4" path="res://scripts/topping_dispenser.gd" id="14_23wr2"]
@@ -211,10 +212,10 @@ mesh = SubResource("CylinderMesh_u2e7o")
 
 [node name="Dispensers" type="Node3D" parent="." unique_id=1123584474]
 
-[node name="GlasDispenser" type="Node3D" parent="Dispensers" unique_id=1445439542]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.8, 3, -1.1)
-script = ExtResource("13_w68ji")
-metadata/_custom_type_script = "uid://bj1lct1xewos5"
+[node name="GlasDispenser" type="Node3D" parent="Dispensers" unique_id=1166008151]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.8, 3.7287335, -1.1)
+script = ExtResource("13_jxwrd")
+metadata/_custom_type_script = "uid://c6mt5iyldrwjm"
 
 [node name="FluidDispenser" type="Node3D" parent="Dispensers" unique_id=1110034899]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 3, -0.268)

@@ -6,6 +6,7 @@ class_name ToppingDispenser
 @export var boba : Mesh
 @export var icecubes: Mesh
 @export var lava : Mesh
+
 enum DispenserType {GOLD_FISH, BOBA, ICECUBES, LAVA}
 var _type : DispenserType = DispenserType.GOLD_FISH
 var current_mesh : Mesh = gold_fish

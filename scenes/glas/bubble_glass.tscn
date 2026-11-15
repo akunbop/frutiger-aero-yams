@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://w2jxvna0xya3"]
+
+[ext_resource type="PackedScene" uid="uid://c3gimxctelnyo" path="res://assets/glass/bubble_glass.glb" id="1_mo5px"]
+[ext_resource type="Script" uid="uid://bgp7do3cpprbr" path="res://scripts/glasses.gd" id="2_njajr"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_beq0g"]
+size = Vector3(0.111529544, 0.013745118, 0.055987548)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_njajr"]
+size = Vector3(0.182, 0.014, 0.056)
+
+[node name="bubble_glass" unique_id=1941734772 node_paths=PackedStringArray("mesh", "wall") instance=ExtResource("1_mo5px")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+script = ExtResource("2_njajr")
+mesh = NodePath("bubble_glass")
+wall = NodePath("StaticBody3D")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=504292288]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=214652333]
+transform = Transform3D(0.99999976, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, -0.0030976068, -0.0045853555, -0.0008514456)
+shape = SubResource("BoxShape3D_beq0g")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" index="1" unique_id=1015987508]
+transform = Transform3D(-4.3711378e-08, -0.99999976, 0, 0.99999976, -4.3711378e-08, 0, 0, 0, 0.99999976, 0.032948714, 0.084, -0.0008514456)
+shape = SubResource("BoxShape3D_njajr")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D" index="2" unique_id=1283050434]
+transform = Transform3D(-4.3711378e-08, -0.99999976, 0, 0.99999976, -4.3711378e-08, 0, 0, 0, 0.99999976, -0.032029025, 0.084, -0.0008514456)
+shape = SubResource("BoxShape3D_njajr")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="StaticBody3D" index="3" unique_id=1534101426]
+transform = Transform3D(1.9106853e-15, 4.3711378e-08, -0.99999976, 0.99999976, -4.3711378e-08, 2.1175824e-22, -4.3711378e-08, -0.99999976, -4.3711378e-08, 0.0015490865, 0.084, -0.03148949)
+shape = SubResource("BoxShape3D_njajr")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="StaticBody3D" index="4" unique_id=1390011153]
+transform = Transform3D(1.9106855e-15, 4.3711378e-08, -0.99999976, 0.99999976, -4.3711378e-08, 4.2351647e-22, -4.3711378e-08, -0.99999976, -4.3711378e-08, 0.00044352282, 0.084, 0.027768988)
+shape = SubResource("BoxShape3D_njajr")
