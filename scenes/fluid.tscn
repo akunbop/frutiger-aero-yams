@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://wrq7oko061p8"]
 
 [ext_resource type="PackedScene" uid="uid://dufkdsdvm1fwj" path="res://scenes/blue_liquid.tscn" id="2_0va8q"]
+[ext_resource type="PackedScene" uid="uid://dewvngynpoyfb" path="res://assets/Basics/WhiteBasicWonkyGlass.tscn" id="2_dbp7g"]
 [ext_resource type="PackedScene" uid="uid://iey1yycejash" path="res://assets/glass/wonky_glass.glb" id="3_dbp7g"]
+[ext_resource type="PackedScene" uid="uid://c7yv6apcfnlti" path="res://scenes/icecubes.tscn" id="4_tcnku"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_u2e7o"]
 size = Vector3(0.111529544, 0.013745118, 0.055987548)
@@ -29,6 +31,9 @@ transform = Transform3D(1, 0, 0, 0, 0.8699434, 0.49315166, 0, -0.49315166, 0.869
 [node name="wonky_glass" parent="." unique_id=339466124 instance=ExtResource("3_dbp7g")]
 transform = Transform3D(18.99, 0, 0, 0, 18.99, 0, 0, 0, 18.99, 0.19131821, -2.3818524, -0.012124777)
 
+[node name="wonky_glass2" parent="wonky_glass" unique_id=508145519 instance=ExtResource("2_dbp7g")]
+transform = Transform3D(0.89, 0, 0, 0, 0.89, 0, 0, 0, 0.89, 0, 0, 0.0013398408)
+
 [node name="StaticBody3D" type="StaticBody3D" parent="wonky_glass" unique_id=1103645914]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="wonky_glass/StaticBody3D" unique_id=1142791579]
@@ -52,7 +57,8 @@ transform = Transform3D(1.9106842e-15, 4.371137e-08, -0.99999976, 0.99999976, -4
 shape = SubResource("BoxShape3D_u2e7o")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=861206281]
-transform = Transform3D(1, 0, 0, 0, 0.6524048, 0.7578707, 0, -0.7578707, 0.6524048, 0, 2.7992613, 3.4089878)
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 2.7992613, 3.4089878)
+visible = false
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="." unique_id=1885859439]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.111, 1, -0.048)
@@ -68,3 +74,16 @@ process_material = SubResource("ParticleProcessMaterial_u2e7o")
 draw_pass_1 = SubResource("SphereMesh_cvepl")
 
 [node name="BlueLiquid" parent="." unique_id=412552048 instance=ExtResource("2_0va8q")]
+
+[node name="BlueLiquid2" parent="." unique_id=634940319 instance=ExtResource("4_tcnku")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.14548874, 0, -0.0948839)
+visible = false
+
+[node name="Fluid3DRenderer" parent="BlueLiquid2" index="0" unique_id=138970529]
+transform = Transform3D(1.9999999, 0, 0, 0, 1.9999999, 0, 0, 0, 1.9999999, 0.33926278, -0.76642656, 0.048527576)
+
+[node name="Fluid3D" parent="BlueLiquid2" index="1" unique_id=1827769903]
+points = PackedVector3Array(0, 0, 0, 0.1, 0, 0, -0.1, 0, 0, 0, 0, 0.1, 0, 0, -0.1, 0, 0.1, 0)
+transform = Transform3D(1.9999999, 0, 0, 0, 1.9999999, 0, 0, 0, 1.9999999, 0.33926278, -0.76642656, 0.048527576)
+
+[editable path="BlueLiquid2"]

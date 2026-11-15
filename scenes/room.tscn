@@ -18,7 +18,11 @@
 [ext_resource type="Script" uid="uid://dpoitmmix53r4" path="res://scripts/topping_dispenser.gd" id="14_23wr2"]
 [ext_resource type="Material" uid="uid://ddad6e6sowp31" path="res://assets/materials/black_boba_material.tres" id="15_3j2fx"]
 [ext_resource type="ArrayMesh" uid="uid://di53jgymlamet" path="res://assets/objects/topping_glb_scene/ice_cube_Cube_002.res" id="16_dynfe"]
-[ext_resource type="Material" uid="uid://u22wvh0wiro0" path="res://assets/materials/shaders/bubble_button.tres" id="18_katsu"]
+[ext_resource type="PackedScene" uid="uid://cmh4esnqplfp4" path="res://assets/frutiger_person.tscn" id="18_katsu"]
+[ext_resource type="PackedScene" uid="uid://b178ob1l573ca" path="res://assets/glass/bubble_glass.tscn" id="19_2ulci"]
+[ext_resource type="PackedScene" uid="uid://dvi4vfkyr40jw" path="res://assets/glass/lavalamp_glass.tscn" id="20_kk8bn"]
+[ext_resource type="PackedScene" uid="uid://bssq1mfpvndot" path="res://assets/glass/normal_glass.tscn" id="21_mc3m6"]
+[ext_resource type="PackedScene" uid="uid://d3bw4walbcy1v" path="res://assets/glass/wonky_glass.tscn" id="22_a5qmg"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_katsu"]
 sky_top_color = Color(0, 0.7490196, 1, 1)
@@ -195,52 +199,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8, 3, -1.1)
 script = ExtResource("13_w68ji")
 metadata/_custom_type_script = "uid://bj1lct1xewos5"
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1179732906]
+[node name="FrutigerPerson" parent="." unique_id=1934764386 instance=ExtResource("18_katsu")]
+transform = Transform3D(-0.0012773708, 0, 0.99999917, 0, 1, 0, -0.99999917, 0, -0.0012773708, 0.09910327, 2.4449487, 1.9679179)
 
-[node name="Control" type="Control" parent="CanvasLayer" unique_id=78136311]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="bubble_glass" parent="." unique_id=1588051643 instance=ExtResource("19_2ulci")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 1.9161518, 2.1038122, -0.35276163)
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control" unique_id=213664993]
-material = ExtResource("18_katsu")
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = 411.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="lavalamp_glass" parent="." unique_id=1627487390 instance=ExtResource("20_kk8bn")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -0.006679103, 2.0819585, -0.03981638)
 
-[node name="Button" type="Button" parent="CanvasLayer/Control/HBoxContainer" unique_id=913313518]
-material = ExtResource("18_katsu")
-layout_mode = 2
-size_flags_horizontal = 3
-text = "Glas"
+[node name="normal_glass" parent="." unique_id=1593314999 instance=ExtResource("21_mc3m6")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -3.7611551, 2.0902128, -1.1493028)
 
-[node name="Button2" type="Button" parent="CanvasLayer/Control/HBoxContainer" unique_id=10652323]
-material = ExtResource("18_katsu")
-layout_mode = 2
-size_flags_horizontal = 3
-text = "Fluid"
-
-[node name="Button3" type="Button" parent="CanvasLayer/Control/HBoxContainer" unique_id=830003032]
-material = ExtResource("18_katsu")
-layout_mode = 2
-size_flags_horizontal = 3
-text = "Syrup"
-
-[node name="Button4" type="Button" parent="CanvasLayer/Control/HBoxContainer" unique_id=2125563158]
-material = ExtResource("18_katsu")
-layout_mode = 2
-size_flags_horizontal = 3
-text = "Topping"
-
-[node name="Button5" type="Button" parent="CanvasLayer/Control/HBoxContainer" unique_id=713684664]
-material = ExtResource("18_katsu")
-layout_mode = 2
-size_flags_horizontal = 3
-text = "Deco"
+[node name="wonky_glass" parent="." unique_id=1294920463 instance=ExtResource("22_a5qmg")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -2.0344164, 2.0680604, -0.3306051)

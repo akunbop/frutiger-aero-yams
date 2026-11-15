@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://d3bw4walbcy1v"]
+
+[ext_resource type="PackedScene" uid="uid://iey1yycejash" path="res://assets/glass/wonky_glass.glb" id="1_eiv68"]
+
+[node name="wonky_glass" unique_id=1294920463 instance=ExtResource("1_eiv68")]
