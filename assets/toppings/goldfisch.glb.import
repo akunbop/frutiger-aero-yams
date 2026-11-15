@@ -69,7 +69,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/objects/toppings/goldfisch_Cube_003.res",
+"save_to_file/fallback_path": "res://assets/objects/topping_glb_scene/goldfisch_Cube_003.res",
 "save_to_file/path": "uid://dus7rxqi7ntmm"
 }
 }

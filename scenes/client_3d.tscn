@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://c4sbx1vxbr73o"]
+
+[ext_resource type="Script" uid="uid://djao552w65v1i" path="res://scripts/client_3d.gd" id="1_i5e3j"]
+[ext_resource type="PackedScene" uid="uid://cmh4esnqplfp4" path="res://assets/frutiger_person.tscn" id="2_0tuvx"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_u2e7o"]
+viewport_path = NodePath("FrutigerPerson/Sprite3D/SubViewport")
+
+[node name="Client3D" type="Node3D" unique_id=1620700175]
+script = ExtResource("1_i5e3j")
+
+[node name="FrutigerPerson" parent="." unique_id=1934764386 instance=ExtResource("2_0tuvx")]
+
+[node name="Sprite3D" type="Sprite3D" parent="FrutigerPerson" unique_id=12647939]
+billboard = 2
+texture = SubResource("ViewportTexture_u2e7o")
+
+[node name="SubViewport" type="SubViewport" parent="FrutigerPerson/Sprite3D" unique_id=1483998143]
+transparent_bg = true
+
+[node name="Label" type="Label" parent="FrutigerPerson/Sprite3D/SubViewport" unique_id=1813084204]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -27.0
+offset_right = 27.0
+offset_bottom = 49.0
+grow_horizontal = 2
+text = "ORDER
+"
