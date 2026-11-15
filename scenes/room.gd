@@ -37,7 +37,8 @@ func MixerStationEntered(body: Node3D) -> void:
 func syrup_dispenser_dispensed(dispenser: SyrupDispenser):
 	var num = dispenser.array_id
 	var glas_ref : Glass = belts[num].current_glas
-	glas_ref.syrup_type = dispenser.syrup_type
+	if glas_ref != null:
+		glas_ref.syrup_type = dispenser.syrup_type
 	
 func ToppingStationEntered(body: Node3D) -> void:
 	pass # Replace with function body.
@@ -45,7 +46,8 @@ func ToppingStationEntered(body: Node3D) -> void:
 func topping_dispenser_dispensed(dispenser: ToppingDispenser):
 	var num = dispenser.array_id
 	var glas_ref : Glass = belts[num].current_glas
-	glas_ref.topping_type = dispenser._type
+	if glas_ref != null:
+		glas_ref.topping_type = dispenser._type
 	
 func DecoStationEntered(body: Node3D) -> void:
 	pass # Replace with function body.
@@ -53,4 +55,5 @@ func DecoStationEntered(body: Node3D) -> void:
 func deco_dispenser_dispensed(dispenser: DecoDispenser):
 	var num = dispenser.array_id
 	var glas_ref : Glass = belts[num].current_glas
-	glas_ref.deco_type = dispenser.deco_type
+	if glas_ref != null:
+		glas_ref.deco_type = dispenser.deco_type

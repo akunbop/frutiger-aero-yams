@@ -22,6 +22,7 @@
 [ext_resource type="ArrayMesh" uid="uid://di53jgymlamet" path="res://assets/objects/topping_glb_scene/ice_cube_Cube_002.res" id="16_dynfe"]
 [ext_resource type="PackedScene" uid="uid://cmh4esnqplfp4" path="res://assets/frutiger_person.tscn" id="18_katsu"]
 [ext_resource type="Script" uid="uid://c7o4dftukyn1m" path="res://scripts/deco_dispenser.gd" id="21_2ulci"]
+[ext_resource type="ArrayMesh" uid="uid://cjoef4ndt8l0n" path="res://assets/objects/topping_glb_scene/qualle_BézierCurve_004.res" id="21_kk8bn"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_katsu"]
 sky_top_color = Color(0, 0.7490196, 1, 1)
@@ -243,6 +244,7 @@ topping_meshes = Object(Node3D,"unique_name_in_owner":false,"process_mode":0,"pr
 gold_fish = ExtResource("14_3j2fx")
 boba = SubResource("SphereMesh_x4pa0")
 icecubes = ExtResource("16_dynfe")
+jellyfish = ExtResource("21_kk8bn")
 metadata/_custom_type_script = "uid://dpoitmmix53r4"
 
 [node name="DecoDispenser" type="Node3D" parent="Dispensers" unique_id=1396798003]

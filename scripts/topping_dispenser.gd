@@ -5,12 +5,12 @@ class_name ToppingDispenser
 @export var gold_fish : Mesh
 @export var boba : Mesh
 @export var icecubes: Mesh
-@export var lava : Mesh
+@export var jellyfish : Mesh
 
 var array_id : int = 3
 
 
-enum DispenserType {GOLD_FISH, BOBA, ICECUBES, LAVA}
+enum DispenserType {GOLD_FISH, BOBA, ICECUBES, JELLYFISH}
 var _type : DispenserType = DispenserType.GOLD_FISH
 var current_mesh : Mesh = gold_fish
 
@@ -28,8 +28,8 @@ func set_dispenser_type(new_type : DispenserType):
 			current_mesh = boba
 		DispenserType.ICECUBES:
 			current_mesh = icecubes
-		DispenserType.LAVA:
-			current_mesh = lava
+		DispenserType.JELLYFISH:
+			current_mesh = jellyfish
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("test"):
@@ -45,7 +45,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		set_dispenser_type(DispenserType.GOLD_FISH)
 		dispense()
 	if Input.is_action_just_pressed("test3"):
-		set_dispenser_type(DispenserType.ICECUBES)
+		set_dispenser_type(DispenserType.JELLYFISH)
 		dispense()
 
 func dispense():
