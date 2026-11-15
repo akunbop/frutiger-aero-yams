@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://bssq1mfpvndot"]
+
+[ext_resource type="PackedScene" uid="uid://dlnr2fbytfssj" path="res://assets/glass/normal_glass.glb" id="1_56oq8"]
+
+[node name="normal_glass" unique_id=1593314999 instance=ExtResource("1_56oq8")]

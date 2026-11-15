@@ -16,7 +16,7 @@ subsurf_scatter_strength = 0.1
 refraction_enabled = true
 refraction_scale = 0.02
 
-[sub_resource type="SphereMesh" id="SphereMesh_0va8q"]
+[sub_resource type="SphereMesh" id="SphereMesh_op2hx"]
 material = SubResource("StandardMaterial3D_hnv2w")
 radius = 0.025
 height = 0.05
