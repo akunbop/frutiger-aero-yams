@@ -1,0 +1,14 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://u22wvh0wiro0"]
+
+[ext_resource type="Shader" uid="uid://7uvyt47x5i3f" path="res://shaders/glassui.gdshader" id="1_1xqvr"]
+
+[resource]
+shader = ExtResource("1_1xqvr")
+shader_parameter/brightness = 0.1
+shader_parameter/chromatic_shift_amount = 0.499999988824
+shader_parameter/bend_amount = 0.2500000037253
+shader_parameter/blur_amount = 0.0
+shader_parameter/grain_amount = 0.0
+shader_parameter/curve_light_blend = 0.5
+shader_parameter/rim_light_blend = 0.8
+shader_parameter/shadow_color = Color(0, 0, 0, 1)

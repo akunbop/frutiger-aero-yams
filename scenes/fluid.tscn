@@ -33,48 +33,23 @@ transform = Transform3D(18.99, 0, 0, 0, 18.99, 0, 0, 0, 18.99, 0.19131821, -2.38
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="wonky_glass/StaticBody3D" unique_id=1142791579]
 transform = Transform3D(0.99999976, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, -0.0030976068, -0.0045853555, -0.0008514456)
-visible = false
 shape = SubResource("BoxShape3D_u2e7o")
-
-[node name="CollisionShape3D6" type="GPUParticlesCollisionBox3D" parent="wonky_glass/StaticBody3D" unique_id=480385]
-transform = Transform3D(0.9999617, -0.0087265335, 0, 0.0087265335, 0.9999617, 0, 0, 0, 0.99999976, -0.0030976068, -0.0045853555, -0.0008514456)
-size = Vector3(0.11, 0.05, 0.06)
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="wonky_glass/StaticBody3D" unique_id=331547186]
 transform = Transform3D(-4.3711367e-08, -0.99999976, 0, 0.99999976, -4.3711367e-08, 0, 0, 0, 0.99999976, 0.032948714, 0.04432258, -0.0008514456)
-visible = false
 shape = SubResource("BoxShape3D_u2e7o")
-
-[node name="CollisionShape3D7" type="GPUParticlesCollisionBox3D" parent="wonky_glass/StaticBody3D" unique_id=492815188]
-transform = Transform3D(-4.3711367e-08, -0.99999976, 0, 0.99999976, -4.3711367e-08, 0, 0, 0, 0.99999976, 0.04072459, 0.044, -0.0009999999)
-size = Vector3(0.11, 0.025449218, 0.06)
 
 [node name="CollisionShape3D3" type="CollisionShape3D" parent="wonky_glass/StaticBody3D" unique_id=631773404]
 transform = Transform3D(-4.3711367e-08, -0.99999976, 0, 0.99999976, -4.3711367e-08, 0, 0, 0, 0.99999976, -0.032029025, 0.04432258, -0.0008514456)
-visible = false
 shape = SubResource("BoxShape3D_u2e7o")
-
-[node name="CollisionShape3D8" type="GPUParticlesCollisionBox3D" parent="wonky_glass/StaticBody3D" unique_id=791076559]
-transform = Transform3D(-4.3711367e-08, -0.99999976, 0, 0.99999976, -4.3711367e-08, 0, 0, 0, 0.99999976, -0.038188692, 0.044, -0.0009999999)
-size = Vector3(0.11, 0.0246875, 0.06)
 
 [node name="CollisionShape3D4" type="CollisionShape3D" parent="wonky_glass/StaticBody3D" unique_id=487315525]
 transform = Transform3D(1.9106842e-15, 4.3711374e-08, -0.99999976, 0.99999976, -4.371136e-08, 0, -4.371136e-08, -0.99999976, -4.3711374e-08, 0.0015490865, 0.04432258, -0.03148949)
-visible = false
 shape = SubResource("BoxShape3D_u2e7o")
-
-[node name="CollisionShape3D9" type="GPUParticlesCollisionBox3D" parent="wonky_glass/StaticBody3D" unique_id=206186184]
-transform = Transform3D(1.910685e-15, 4.3711367e-08, 0.99999976, 0.99999976, -4.3711367e-08, 0, 4.3711367e-08, 0.99999976, -4.3711367e-08, 0.0012367256, 0.044, -0.038817797)
-size = Vector3(0.11, 0.02706787, 0.06)
 
 [node name="CollisionShape3D5" type="CollisionShape3D" parent="wonky_glass/StaticBody3D" unique_id=1332849016]
 transform = Transform3D(1.9106842e-15, 4.371137e-08, -0.99999976, 0.99999976, -4.3711356e-08, 0, -4.3711356e-08, -0.99999976, -4.371137e-08, 0.00044352282, 0.04432258, 0.027768988)
-visible = false
 shape = SubResource("BoxShape3D_u2e7o")
-
-[node name="CollisionShape3D10" type="GPUParticlesCollisionBox3D" parent="wonky_glass/StaticBody3D" unique_id=268617439]
-transform = Transform3D(1.910685e-15, 4.3711367e-08, 0.99999976, 0.99999976, -4.3711367e-08, 0, 4.3711367e-08, 0.99999976, -4.3711367e-08, 0.0012367256, 0.044, 0.03404852)
-size = Vector3(0.11, 0.02227539, 0.06)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=861206281]
 transform = Transform3D(1, 0, 0, 0, 0.6524048, 0.7578707, 0, -0.7578707, 0.6524048, 0, 2.7992613, 3.4089878)
