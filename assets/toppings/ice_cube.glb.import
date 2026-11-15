@@ -46,6 +46,17 @@ _subresources={
 "use_external/fallback_path": "res://assets/materials/toppings_material.tres",
 "use_external/path": "uid://dpxi404h3dfv6"
 }
+},
+"meshes": {
+"ice_cube_Cube_002": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://assets/objects/toppings/ice_cube_Cube_002.res",
+"save_to_file/path": "uid://di53jgymlamet"
+}
 }
 }
 gltf/naming_version=2
