@@ -99,10 +99,10 @@ process_material = SubResource("ParticleProcessMaterial_u2e7o")
 draw_pass_1 = SubResource("SphereMesh_cvepl")
 
 [node name="BlueLiquid" parent="." unique_id=412552048 instance=ExtResource("2_0va8q")]
-visible = false
 
 [node name="BlueLiquid2" parent="." unique_id=634940319 instance=ExtResource("4_tcnku")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.14548874, 0, -0.0948839)
+visible = false
 
 [node name="Fluid3DRenderer" parent="BlueLiquid2" index="0" unique_id=138970529]
 transform = Transform3D(1.9999999, 0, 0, 0, 1.9999999, 0, 0, 0, 1.9999999, 0.33926278, -0.76642656, 0.048527576)
