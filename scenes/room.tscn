@@ -17,11 +17,17 @@
 [ext_resource type="Script" uid="uid://dmbk7q1kd1r8n" path="res://scenes/area_3d.gd" id="13_spkk5"]
 [ext_resource type="ArrayMesh" uid="uid://dus7rxqi7ntmm" path="res://assets/objects/topping_glb_scene/goldfisch_Cube_003.res" id="14_3j2fx"]
 [ext_resource type="Script" uid="uid://dpoitmmix53r4" path="res://scripts/topping_dispenser.gd" id="14_23wr2"]
+[ext_resource type="PackedScene" uid="uid://dfstnsh3i14o4" path="res://scenes/dispenser/maschine_12.tscn" id="14_gjarb"]
 [ext_resource type="Material" uid="uid://ddad6e6sowp31" path="res://assets/materials/black_boba_material.tres" id="15_3j2fx"]
 [ext_resource type="Script" uid="uid://m717q4p13nwt" path="res://scripts/fluid_dispenser.gd" id="16_2ulci"]
+[ext_resource type="PackedScene" uid="uid://cy8xominqin21" path="res://scenes/dispenser/maschine_22.tscn" id="16_5o3hq"]
 [ext_resource type="ArrayMesh" uid="uid://di53jgymlamet" path="res://assets/objects/topping_glb_scene/ice_cube_Cube_002.res" id="16_dynfe"]
+[ext_resource type="PackedScene" uid="uid://c0v5dsveowo84" path="res://scenes/dispenser/maschine_32.tscn" id="17_7r6do"]
 [ext_resource type="Script" uid="uid://com6vicu8otfb" path="res://scripts/syrup_dispenser.gd" id="17_kk8bn"]
+[ext_resource type="PackedScene" uid="uid://dwoc75ntnl17g" path="res://scenes/dispenser/maschine_42.tscn" id="18_1wmww"]
 [ext_resource type="PackedScene" uid="uid://cmh4esnqplfp4" path="res://assets/frutiger_person.tscn" id="18_katsu"]
+[ext_resource type="PackedScene" uid="uid://3wt6tb1p6c2j" path="res://scenes/dispenser/maschine_52.tscn" id="19_ftego"]
+[ext_resource type="ArrayMesh" uid="uid://bc7w02djyeu0p" path="res://assets/objects/topping_glb_scene/qualle_BézierCurve_004.res" id="22_a5qmg"]
 [ext_resource type="Script" uid="uid://c7o4dftukyn1m" path="res://scripts/deco_dispenser.gd" id="22_mc3m6"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_katsu"]
@@ -203,6 +209,9 @@ transform = Transform3D(-1, 0, -7.54979e-08, 0, 1, 0, 1.509958e-07, 0, -0.5, 20,
 [node name="GlasStation" type="Node3D" parent="Stations" unique_id=173456729]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.8, 2, -1.105)
 
+[node name="maschine_12" parent="Stations/GlasStation" unique_id=2011057392 instance=ExtResource("14_gjarb")]
+transform = Transform3D(1.94, 0, 0, 0, 1.94, 0, 0, 0, 1.94, 0, 3.7555776, 0)
+
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Stations/GlasStation" unique_id=681225010]
 mesh = SubResource("CylinderMesh_u2e7o")
 
@@ -215,6 +224,9 @@ shape = SubResource("CylinderShape3D_jxwrd")
 
 [node name="FluidStation" type="Node3D" parent="Stations" unique_id=176562863]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2, -0.268)
+
+[node name="maschine_22" parent="Stations/FluidStation" unique_id=1921010900 instance=ExtResource("16_5o3hq")]
+transform = Transform3D(1.94, 0, 0, 0, 1.94, 0, 0, 0, 1.94, 0, 4.546468, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Stations/FluidStation" unique_id=835014842]
 mesh = SubResource("CylinderMesh_u2e7o")
@@ -229,6 +241,9 @@ shape = SubResource("CylinderShape3D_spkk5")
 [node name="MixerStation" type="Node3D" parent="Stations" unique_id=821756794]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00044608116, 2, 0)
 
+[node name="maschine_32" parent="Stations/MixerStation" unique_id=1920089205 instance=ExtResource("17_7r6do")]
+transform = Transform3D(1.94, 0, 0, 0, 1.94, 0, 0, 0, 1.94, 0, 5.617665, 0)
+
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Stations/MixerStation" unique_id=429469694]
 mesh = SubResource("CylinderMesh_u2e7o")
 
@@ -242,6 +257,9 @@ shape = SubResource("CylinderShape3D_yggoe")
 [node name="ToppingStation" type="Node3D" parent="Stations" unique_id=1847399195]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 2, -0.26)
 
+[node name="maschine_42" parent="Stations/ToppingStation" unique_id=141119193 instance=ExtResource("18_1wmww")]
+transform = Transform3D(1.94, 0, 0, 0, 1.94, 0, 0, 0, 1.94, 0, 5.050461, 0)
+
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Stations/ToppingStation" unique_id=512288428]
 mesh = SubResource("CylinderMesh_u2e7o")
 
@@ -254,6 +272,9 @@ shape = SubResource("CylinderShape3D_2ulci")
 
 [node name="DekoStation" type="Node3D" parent="Stations" unique_id=563004401]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8, 2, -1.1)
+
+[node name="maschine_52" parent="Stations/DekoStation" unique_id=1739291341 instance=ExtResource("19_ftego")]
+transform = Transform3D(1.94, 0, 0, 0, 1.94, 0, 0, 0, 1.94, 0, 4.296594, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Stations/DekoStation" unique_id=1443841162]
 mesh = SubResource("CylinderMesh_u2e7o")
@@ -284,7 +305,7 @@ script = ExtResource("17_kk8bn")
 metadata/_custom_type_script = "uid://com6vicu8otfb"
 
 [node name="ToppingDispenser" type="Node3D" parent="Dispensers" unique_id=926626877]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 5, -0.26)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 5.620366, -0.26)
 script = ExtResource("14_23wr2")
 topping_meshes = Object(Node3D,"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"physics_interpolation_mode":0,"auto_translate_mode":0,"editor_description":"","transform":Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"script":Resource("res://scripts/liquid.gd"),"fluid_renderer":Object(MultiMeshInstance3D,"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"physics_interpolation_mode":0,"auto_translate_mode":0,"editor_description":"","transform":Transform3D(1.9999999, 0, 0, 0, 1.9999999, 0, 0, 0, 1.9999999, -0.028047323, -0.76642656, -0.30018437),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"layers":1,"sorting_offset":0.0,"sorting_use_aabb_center":true,"material_override":null,"material_overlay":null,"transparency":0.0,"cast_shadow":1,"extra_cull_margin":0.0,"custom_aabb":AABB(0, 0, 0, 0, 0, 0),"lod_bias":1.0,"ignore_occlusion_culling":false,"gi_mode":1,"gi_lightmap_texel_scale":1.0,"visibility_range_begin":0.0,"visibility_range_begin_margin":0.0,"visibility_range_end":0.0,"visibility_range_end_margin":0.0,"visibility_range_fade_mode":0,"multimesh":null,"script":Resource("res://addons/godot-rapier3d/fluid_3d_renderer.gd"),"fluid":Object(Fluid3D,"debug_draw":false,"density":10.0,"lifetime":0.0,"effects":Array[Resource]([null, null, null]),"points":PackedVector3Array(0, 0, 0, 0.05, 0, 0, 0.1, 0, 0, 0.15, 0, 0, 0.2, 0, 0, 0, 0.05, 0, 0.05, 0.05, 0, 0.1, 0.05, 0, 0.15, 0.05, 0, 0.2, 0.05, 0, 0, 0.1, 0, 0.05, 0.1, 0, 0.1, 0.1, 0, 0.15, 0.1, 0, 0.2, 0.1, 0, 0, 0.15, 0, 0.05, 0.15, 0, 0.1, 0.15, 0, 0.15, 0.15, 0, 0.2, 0.15, 0, 0, 0.2, 0, 0.05, 0.2, 0, 0.1, 0.2, 0, 0.15, 0.2, 0, 0.2, 0.2, 0, 0, 0.25, 0, 0.05, 0.25, 0, 0.1, 0.25, 0, 0.15, 0.25, 0, 0.2, 0.25, 0, 0, 0.3, 0, 0.05, 0.3, 0, 0.1, 0.3, 0, 0.15, 0.3, 0, 0.2, 0.3, 0, 0, 0.35, 0, 0.05, 0.35, 0, 0.1, 0.35, 0, 0.15, 0.35, 0, 0.2, 0.35, 0, 0, 0.4, 0, 0.05, 0.4, 0, 0.1, 0.4, 0, 0.15, 0.4, 0, 0.2, 0.4, 0, 0, 0.45000002, 0, 0.05, 0.45000002, 0, 0.1, 0.45000002, 0, 0.15, 0.45000002, 0, 0.2, 0.45000002, 0, 0, 0.5, 0, 0.05, 0.5, 0, 0.1, 0.5, 0, 0.15, 0.5, 0, 0.2, 0.5, 0, 0, 0.55, 0, 0.05, 0.55, 0, 0.1, 0.55, 0, 0.15, 0.55, 0, 0.2, 0.55, 0, 0, 0.6, 0, 0.05, 0.6, 0, 0.1, 0.6, 0, 0.15, 0.6, 0, 0.2, 0.6, 0, 0, 0.65000004, 0, 0.05, 0.65000004, 0, 0.1, 0.65000004, 0, 0.15, 0.65000004, 0, 0.2, 0.65000004, 0, 0, 0.7, 0, 0.05, 0.7, 0, 0.1, 0.7, 0, 0.15, 0.7, 0, 0.2, 0.7, 0, 0, 0.75, 0, 0.05, 0.75, 0, 0.1, 0.75, 0, 0.15, 0.75, 0, 0.2, 0.75, 0, 0, 0.8, 0, 0.05, 0.8, 0, 0.1, 0.8, 0, 0.15, 0.8, 0, 0.2, 0.8, 0, 0, 0.85, 0, 0.05, 0.85, 0, 0.1, 0.85, 0, 0.15, 0.85, 0, 0.2, 0.85, 0, 0, 0.90000004, 0, 0.05, 0.90000004, 0, 0.1, 0.90000004, 0, 0.15, 0.90000004, 0, 0.2, 0.90000004, 0, 0, 0.95, 0, 0.05, 0.95, 0, 0.1, 0.95, 0, 0.15, 0.95, 0, 0.2, 0.95, 0, 0, 0, 0.05, 0.05, 0, 0.05, 0.1, 0, 0.05, 0.15, 0, 0.05, 0.2, 0, 0.05, 0, 0.05, 0.05, 0.05, 0.05, 0.05, 0.1, 0.05, 0.05, 0.15, 0.05, 0.05, 0.2, 0.05, 0.05, 0, 0.1, 0.05, 0.05, 0.1, 0.05, 0.1, 0.1, 0.05, 0.15, 0.1, 0.05, 0.2, 0.1, 0.05, 0, 0.15, 0.05, 0.05, 0.15, 0.05, 0.1, 0.15, 0.05, 0.15, 0.15, 0.05, 0.2, 0.15, 0.05, 0, 0.2, 0.05, 0.05, 0.2, 0.05, 0.1, 0.2, 0.05, 0.15, 0.2, 0.05, 0.2, 0.2, 0.05, 0, 0.25, 0.05, 0.05, 0.25, 0.05, 0.1, 0.25, 0.05, 0.15, 0.25, 0.05, 0.2, 0.25, 0.05, 0, 0.3, 0.05, 0.05, 0.3, 0.05, 0.1, 0.3, 0.05, 0.15, 0.3, 0.05, 0.2, 0.3, 0.05, 0, 0.35, 0.05, 0.05, 0.35, 0.05, 0.1, 0.35, 0.05, 0.15, 0.35, 0.05, 0.2, 0.35, 0.05, 0, 0.4, 0.05, 0.05, 0.4, 0.05, 0.1, 0.4, 0.05, 0.15, 0.4, 0.05, 0.2, 0.4, 0.05, 0, 0.45000002, 0.05, 0.05, 0.45000002, 0.05, 0.1, 0.45000002, 0.05, 0.15, 0.45000002, 0.05, 0.2, 0.45000002, 0.05, 0, 0.5, 0.05, 0.05, 0.5, 0.05, 0.1, 0.5, 0.05, 0.15, 0.5, 0.05, 0.2, 0.5, 0.05, 0, 0.55, 0.05, 0.05, 0.55, 0.05, 0.1, 0.55, 0.05, 0.15, 0.55, 0.05, 0.2, 0.55, 0.05, 0, 0.6, 0.05, 0.05, 0.6, 0.05, 0.1, 0.6, 0.05, 0.15, 0.6, 0.05, 0.2, 0.6, 0.05, 0, 0.65000004, 0.05, 0.05, 0.65000004, 0.05, 0.1, 0.65000004, 0.05, 0.15, 0.65000004, 0.05, 0.2, 0.65000004, 0.05, 0, 0.7, 0.05, 0.05, 0.7, 0.05, 0.1, 0.7, 0.05, 0.15, 0.7, 0.05, 0.2, 0.7, 0.05, 0, 0.75, 0.05, 0.05, 0.75, 0.05, 0.1, 0.75, 0.05, 0.15, 0.75, 0.05, 0.2, 0.75, 0.05, 0, 0.8, 0.05, 0.05, 0.8, 0.05, 0.1, 0.8, 0.05, 0.15, 0.8, 0.05, 0.2, 0.8, 0.05, 0, 0.85, 0.05, 0.05, 0.85, 0.05, 0.1, 0.85, 0.05, 0.15, 0.85, 0.05, 0.2, 0.85, 0.05, 0, 0.90000004, 0.05, 0.05, 0.90000004, 0.05, 0.1, 0.90000004, 0.05, 0.15, 0.90000004, 0.05, 0.2, 0.90000004, 0.05, 0, 0.95, 0.05, 0.05, 0.95, 0.05, 0.1, 0.95, 0.05, 0.15, 0.95, 0.05, 0.2, 0.95, 0.05, 0, 0, 0.1, 0.05, 0, 0.1, 0.1, 0, 0.1, 0.15, 0, 0.1, 0.2, 0, 0.1, 0, 0.05, 0.1, 0.05, 0.05, 0.1, 0.1, 0.05, 0.1, 0.15, 0.05, 0.1, 0.2, 0.05, 0.1, 0, 0.1, 0.1, 0.05, 0.1, 0.1, 0.1, 0.1, 0.1, 0.15, 0.1, 0.1, 0.2, 0.1, 0.1, 0, 0.15, 0.1, 0.05, 0.15, 0.1, 0.1, 0.15, 0.1, 0.15, 0.15, 0.1, 0.2, 0.15, 0.1, 0, 0.2, 0.1, 0.05, 0.2, 0.1, 0.1, 0.2, 0.1, 0.15, 0.2, 0.1, 0.2, 0.2, 0.1, 0, 0.25, 0.1, 0.05, 0.25, 0.1, 0.1, 0.25, 0.1, 0.15, 0.25, 0.1, 0.2, 0.25, 0.1, 0, 0.3, 0.1, 0.05, 0.3, 0.1, 0.1, 0.3, 0.1, 0.15, 0.3, 0.1, 0.2, 0.3, 0.1, 0, 0.35, 0.1, 0.05, 0.35, 0.1, 0.1, 0.35, 0.1, 0.15, 0.35, 0.1, 0.2, 0.35, 0.1, 0, 0.4, 0.1, 0.05, 0.4, 0.1, 0.1, 0.4, 0.1, 0.15, 0.4, 0.1, 0.2, 0.4, 0.1, 0, 0.45000002, 0.1, 0.05, 0.45000002, 0.1, 0.1, 0.45000002, 0.1, 0.15, 0.45000002, 0.1, 0.2, 0.45000002, 0.1, 0, 0.5, 0.1, 0.05, 0.5, 0.1, 0.1, 0.5, 0.1, 0.15, 0.5, 0.1, 0.2, 0.5, 0.1, 0, 0.55, 0.1, 0.05, 0.55, 0.1, 0.1, 0.55, 0.1, 0.15, 0.55, 0.1, 0.2, 0.55, 0.1, 0, 0.6, 0.1, 0.05, 0.6, 0.1, 0.1, 0.6, 0.1, 0.15, 0.6, 0.1, 0.2, 0.6, 0.1, 0, 0.65000004, 0.1, 0.05, 0.65000004, 0.1, 0.1, 0.65000004, 0.1, 0.15, 0.65000004, 0.1, 0.2, 0.65000004, 0.1, 0, 0.7, 0.1, 0.05, 0.7, 0.1, 0.1, 0.7, 0.1, 0.15, 0.7, 0.1, 0.2, 0.7, 0.1, 0, 0.75, 0.1, 0.05, 0.75, 0.1, 0.1, 0.75, 0.1, 0.15, 0.75, 0.1, 0.2, 0.75, 0.1, 0, 0.8, 0.1, 0.05, 0.8, 0.1, 0.1, 0.8, 0.1, 0.15, 0.8, 0.1, 0.2, 0.8, 0.1, 0, 0.85, 0.1, 0.05, 0.85, 0.1, 0.1, 0.85, 0.1, 0.15, 0.85, 0.1, 0.2, 0.85, 0.1, 0, 0.90000004, 0.1, 0.05, 0.90000004, 0.1, 0.1, 0.90000004, 0.1, 0.15, 0.90000004, 0.1, 0.2, 0.90000004, 0.1, 0, 0.95, 0.1, 0.05, 0.95, 0.1, 0.1, 0.95, 0.1, 0.15, 0.95, 0.1, 0.2, 0.95, 0.1, 0, 0, 0.15, 0.05, 0, 0.15, 0.1, 0, 0.15, 0.15, 0, 0.15, 0.2, 0, 0.15, 0, 0.05, 0.15, 0.05, 0.05, 0.15, 0.1, 0.05, 0.15, 0.15, 0.05, 0.15, 0.2, 0.05, 0.15, 0, 0.1, 0.15, 0.05, 0.1, 0.15, 0.1, 0.1, 0.15, 0.15, 0.1, 0.15, 0.2, 0.1, 0.15, 0, 0.15, 0.15, 0.05, 0.15, 0.15, 0.1, 0.15, 0.15, 0.15, 0.15, 0.15, 0.2, 0.15, 0.15, 0, 0.2, 0.15, 0.05, 0.2, 0.15, 0.1, 0.2, 0.15, 0.15, 0.2, 0.15, 0.2, 0.2, 0.15, 0, 0.25, 0.15, 0.05, 0.25, 0.15, 0.1, 0.25, 0.15, 0.15, 0.25, 0.15, 0.2, 0.25, 0.15, 0, 0.3, 0.15, 0.05, 0.3, 0.15, 0.1, 0.3, 0.15, 0.15, 0.3, 0.15, 0.2, 0.3, 0.15, 0, 0.35, 0.15, 0.05, 0.35, 0.15, 0.1, 0.35, 0.15, 0.15, 0.35, 0.15, 0.2, 0.35, 0.15, 0, 0.4, 0.15, 0.05, 0.4, 0.15, 0.1, 0.4, 0.15, 0.15, 0.4, 0.15, 0.2, 0.4, 0.15, 0, 0.45000002, 0.15, 0.05, 0.45000002, 0.15, 0.1, 0.45000002, 0.15, 0.15, 0.45000002, 0.15, 0.2, 0.45000002, 0.15, 0, 0.5, 0.15, 0.05, 0.5, 0.15, 0.1, 0.5, 0.15, 0.15, 0.5, 0.15, 0.2, 0.5, 0.15, 0, 0.55, 0.15, 0.05, 0.55, 0.15, 0.1, 0.55, 0.15, 0.15, 0.55, 0.15, 0.2, 0.55, 0.15, 0, 0.6, 0.15, 0.05, 0.6, 0.15, 0.1, 0.6, 0.15, 0.15, 0.6, 0.15, 0.2, 0.6, 0.15, 0, 0.65000004, 0.15, 0.05, 0.65000004, 0.15, 0.1, 0.65000004, 0.15, 0.15, 0.65000004, 0.15, 0.2, 0.65000004, 0.15, 0, 0.7, 0.15, 0.05, 0.7, 0.15, 0.1, 0.7, 0.15, 0.15, 0.7, 0.15, 0.2, 0.7, 0.15, 0, 0.75, 0.15, 0.05, 0.75, 0.15, 0.1, 0.75, 0.15, 0.15, 0.75, 0.15, 0.2, 0.75, 0.15, 0, 0.8, 0.15, 0.05, 0.8, 0.15, 0.1, 0.8, 0.15, 0.15, 0.8, 0.15, 0.2, 0.8, 0.15, 0, 0.85, 0.15, 0.05, 0.85, 0.15, 0.1, 0.85, 0.15, 0.15, 0.85, 0.15, 0.2, 0.85, 0.15, 0, 0.90000004, 0.15, 0.05, 0.90000004, 0.15, 0.1, 0.90000004, 0.15, 0.15, 0.90000004, 0.15, 0.2, 0.90000004, 0.15, 0, 0.95, 0.15, 0.05, 0.95, 0.15, 0.1, 0.95, 0.15, 0.15, 0.95, 0.15, 0.2, 0.95, 0.15, 0, 0, 0.2, 0.05, 0, 0.2, 0.1, 0, 0.2, 0.15, 0, 0.2, 0.2, 0, 0.2, 0, 0.05, 0.2, 0.05, 0.05, 0.2, 0.1, 0.05, 0.2, 0.15, 0.05, 0.2, 0.2, 0.05, 0.2, 0, 0.1, 0.2, 0.05, 0.1, 0.2, 0.1, 0.1, 0.2, 0.15, 0.1, 0.2, 0.2, 0.1, 0.2, 0, 0.15, 0.2, 0.05, 0.15, 0.2, 0.1, 0.15, 0.2, 0.15, 0.15, 0.2, 0.2, 0.15, 0.2, 0, 0.2, 0.2, 0.05, 0.2, 0.2, 0.1, 0.2, 0.2, 0.15, 0.2, 0.2, 0.2, 0.2, 0.2, 0, 0.25, 0.2, 0.05, 0.25, 0.2, 0.1, 0.25, 0.2, 0.15, 0.25, 0.2, 0.2, 0.25, 0.2, 0, 0.3, 0.2, 0.05, 0.3, 0.2, 0.1, 0.3, 0.2, 0.15, 0.3, 0.2, 0.2, 0.3, 0.2, 0, 0.35, 0.2, 0.05, 0.35, 0.2, 0.1, 0.35, 0.2, 0.15, 0.35, 0.2, 0.2, 0.35, 0.2, 0, 0.4, 0.2, 0.05, 0.4, 0.2, 0.1, 0.4, 0.2, 0.15, 0.4, 0.2, 0.2, 0.4, 0.2, 0, 0.45000002, 0.2, 0.05, 0.45000002, 0.2, 0.1, 0.45000002, 0.2, 0.15, 0.45000002, 0.2, 0.2, 0.45000002, 0.2, 0, 0.5, 0.2, 0.05, 0.5, 0.2, 0.1, 0.5, 0.2, 0.15, 0.5, 0.2, 0.2, 0.5, 0.2, 0, 0.55, 0.2, 0.05, 0.55, 0.2, 0.1, 0.55, 0.2, 0.15, 0.55, 0.2, 0.2, 0.55, 0.2, 0, 0.6, 0.2, 0.05, 0.6, 0.2, 0.1, 0.6, 0.2, 0.15, 0.6, 0.2, 0.2, 0.6, 0.2, 0, 0.65000004, 0.2, 0.05, 0.65000004, 0.2, 0.1, 0.65000004, 0.2, 0.15, 0.65000004, 0.2, 0.2, 0.65000004, 0.2, 0, 0.7, 0.2, 0.05, 0.7, 0.2, 0.1, 0.7, 0.2, 0.15, 0.7, 0.2, 0.2, 0.7, 0.2, 0, 0.75, 0.2, 0.05, 0.75, 0.2, 0.1, 0.75, 0.2, 0.15, 0.75, 0.2, 0.2, 0.75, 0.2, 0, 0.8, 0.2, 0.05, 0.8, 0.2, 0.1, 0.8, 0.2, 0.15, 0.8, 0.2, 0.2, 0.8, 0.2, 0, 0.85, 0.2, 0.05, 0.85, 0.2, 0.1, 0.85, 0.2, 0.15, 0.85, 0.2, 0.2, 0.85, 0.2, 0, 0.90000004, 0.2, 0.05, 0.90000004, 0.2, 0.1, 0.90000004, 0.2, 0.15, 0.90000004, 0.2, 0.2, 0.90000004, 0.2, 0, 0.95, 0.2, 0.05, 0.95, 0.2, 0.1, 0.95, 0.2, 0.15, 0.95, 0.2, 0.2, 0.95, 0.2),"collision_layer":1,"collision_mask":1,"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"physics_interpolation_mode":0,"auto_translate_mode":0,"editor_description":"","transform":Transform3D(1.9999999, 0, 0, 0, 1.9999999, 0, 0, 0, 1.9999999, -0.028047249, -0.76642656, -0.30018434),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"script":Resource("res://addons/godot-rapier3d/fluid_3d_box.gd"),"height":20,"width":5,"depth":5)
 ,"metadata/_custom_type_script":"uid://b5of3xx28r0r3")
@@ -293,6 +314,7 @@ topping_meshes = Object(Node3D,"unique_name_in_owner":false,"process_mode":0,"pr
 gold_fish = ExtResource("14_3j2fx")
 boba = SubResource("SphereMesh_x4pa0")
 icecubes = ExtResource("16_dynfe")
+jellyfish = ExtResource("22_a5qmg")
 metadata/_custom_type_script = "uid://dpoitmmix53r4"
 
 [node name="DecoDispenser" type="Node3D" parent="Dispensers" unique_id=637923127]

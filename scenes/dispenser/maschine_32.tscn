@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://c0v5dsveowo84"]
+
+[ext_resource type="PackedScene" uid="uid://cve1unrnb25jj" path="res://assets/maschinen/maschine_3.glb" id="1_w0wac"]
+
+[node name="maschine_32" unique_id=1920089205 instance=ExtResource("1_w0wac")]
