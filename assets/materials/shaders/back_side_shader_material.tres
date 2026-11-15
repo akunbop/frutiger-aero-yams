@@ -1,0 +1,8 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://ddnt6idq8wy53"]
+
+[ext_resource type="Shader" uid="uid://b7jt0rdup87ql" path="res://assets/materials/shaders/back_side_shader.tres" id="1_ed3wx"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_ed3wx")
+shader_parameter/ColorParameter = Color(1, 0.4, 1, 1)

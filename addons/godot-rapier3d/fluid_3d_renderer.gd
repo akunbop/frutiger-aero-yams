@@ -4,8 +4,7 @@ extends MultiMeshInstance3D
 
 @export var fluid: Fluid3D
 
-
-func _ready():
+func _ready() -> void:
 	if multimesh == null:
 		multimesh = MultiMesh.new()
 		multimesh.transform_format = MultiMesh.TRANSFORM_3D

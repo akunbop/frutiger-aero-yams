@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dq7nfnmrwysfm"]
+
+[ext_resource type="PackedScene" uid="uid://c6bm7iv7aqbgo" path="res://meshes/atom.glb" id="1_n1kd4"]
+[ext_resource type="Material" uid="uid://py2pq5bdknjr" path="res://assets/materials/blue_light.tres" id="2_3q6xs"]
+
+[node name="atom" unique_id=413837089 instance=ExtResource("1_n1kd4")]
+
+[node name="Icosphere_003" parent="." index="0" unique_id=721978155]
+surface_material_override/0 = ExtResource("2_3q6xs")

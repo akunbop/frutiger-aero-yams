@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://lmsskqet43wn"]
+
+[ext_resource type="PackedScene" uid="uid://bw77cxggu1new" path="res://meshes/front_panel.glb" id="1_w2swv"]
+[ext_resource type="Material" uid="uid://1tqrvbpcuxrw" path="res://assets/materials/light_blue.tres" id="2_5hnjr"]
+[ext_resource type="Material" uid="uid://ddnt6idq8wy53" path="res://assets/materials/shaders/back_side_shader_material.tres" id="3_5hnjr"]
+
+[node name="front_panel" unique_id=676248972 instance=ExtResource("1_w2swv")]
+
+[node name="Cube" parent="." index="0" unique_id=1972234494]
+surface_material_override/0 = ExtResource("2_5hnjr")
+
+[node name="Cube_001" parent="." index="1" unique_id=2099143752]
+surface_material_override/0 = ExtResource("3_5hnjr")

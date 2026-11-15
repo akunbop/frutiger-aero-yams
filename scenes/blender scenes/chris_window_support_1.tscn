@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://7xo4trfv57s0"]
+
+[ext_resource type="PackedScene" uid="uid://dw6ybj31qa6ab" path="res://meshes/chris_window_support_1.glb" id="1_xcvet"]
+[ext_resource type="Material" uid="uid://vrhqwbjbo2jt" path="res://assets/materials/white.tres" id="2_o0yvd"]
+
+[node name="chris_window_support_1" unique_id=1340718652 instance=ExtResource("1_xcvet")]
+
+[node name="Plane_002" parent="." index="0" unique_id=1308918964]
+surface_material_override/0 = ExtResource("2_o0yvd")
