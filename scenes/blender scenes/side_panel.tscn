@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://dq65t5eeuwwfq"]
 
 [ext_resource type="PackedScene" uid="uid://dol35vhnup66g" path="res://meshes/side_panel.glb" id="1_ch8n5"]
-[ext_resource type="Material" uid="uid://cwp6drddoq81q" path="res://assets/materials/green.tres" id="2_sril4"]
+[ext_resource type="Material" uid="uid://bai7e2jjcdl8e" path="res://assets/materials/shaders/sealife_shader.tres" id="2_ch8n5"]
 [ext_resource type="Material" uid="uid://vrhqwbjbo2jt" path="res://assets/materials/white.tres" id="3_ig7wi"]
 
 [node name="side_panel" unique_id=1683527620 instance=ExtResource("1_ch8n5")]
 
-[node name="Plane_007" parent="." index="0" unique_id=1533412581]
-surface_material_override/0 = ExtResource("2_sril4")
+[node name="Plane_007" parent="." index="0" unique_id=2029428756]
+surface_material_override/0 = ExtResource("2_ch8n5")
 surface_material_override/1 = ExtResource("3_ig7wi")
