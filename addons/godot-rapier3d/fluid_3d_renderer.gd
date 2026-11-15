@@ -1,4 +1,3 @@
-@tool
 class_name Fluid3DRenderer
 extends MultiMeshInstance3D
 

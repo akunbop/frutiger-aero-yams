@@ -32,9 +32,9 @@ subsurf_scatter_strength = 0.1
 uv1_triplanar_sharpness = 2.928172
 grow_amount = -1.109
 
-[node name="Boba_Seagull" type="Node3D" unique_id=1310278970]
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=517937205]
+[node name="MeshInstance3D" type="MeshInstance3D" unique_id=517937205]
 transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0)
 mesh = SubResource("SphereMesh_oshqu")
 surface_material_override/0 = SubResource("StandardMaterial3D_djggi")
+
+[node name="Boba_Seagull" type="Node3D" parent="." unique_id=1310278970]

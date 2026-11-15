@@ -1,4 +1,3 @@
-@tool
 extends Fluid3D
 
 @export var height := 10:
