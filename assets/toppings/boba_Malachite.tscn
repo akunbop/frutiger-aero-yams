@@ -32,9 +32,9 @@ subsurf_scatter_strength = 0.1
 uv1_triplanar_sharpness = 2.928172
 grow_amount = -1.109
 
-[node name="Boba_Malachite" type="Node3D" unique_id=1845655504]
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1690896548]
+[node name="MeshInstance3D" type="MeshInstance3D" unique_id=1690896548]
 transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0)
 mesh = SubResource("SphereMesh_c6smh")
 surface_material_override/0 = SubResource("StandardMaterial3D_rkgre")
+
+[node name="Boba_Malachite" type="Node3D" parent="." unique_id=1845655504]

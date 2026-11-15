@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cul0rschwowlf"]
+
+[ext_resource type="PackedScene" uid="uid://b0sq52jgugljn" path="res://meshes/window_support.glb" id="1_wicsm"]
+[ext_resource type="Material" uid="uid://vrhqwbjbo2jt" path="res://assets/materials/white.tres" id="2_s043j"]
+
+[node name="window_support" unique_id=763367709 instance=ExtResource("1_wicsm")]
+
+[node name="Plane_003" parent="." index="0" unique_id=698140508]
+surface_material_override/0 = ExtResource("2_s043j")

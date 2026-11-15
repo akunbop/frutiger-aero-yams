@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://cd8m3ebw2iucg"]
+
+[ext_resource type="PackedScene" uid="uid://cuxxdsfva8xyd" path="res://meshes/desk.glb" id="1_klitd"]
+[ext_resource type="Material" uid="uid://faisbwnvqdq3" path="res://assets/materials/blue.tres" id="2_q6r0d"]
+[ext_resource type="Material" uid="uid://py2pq5bdknjr" path="res://assets/materials/blue_light.tres" id="3_13jxn"]
+
+[node name="desk" unique_id=301069911 instance=ExtResource("1_klitd")]
+
+[node name="Cube_003" parent="." index="0" unique_id=1148270152]
+surface_material_override/0 = ExtResource("2_q6r0d")
+surface_material_override/1 = ExtResource("3_13jxn")
+surface_material_override/2 = ExtResource("3_13jxn")
