@@ -38,7 +38,7 @@ script = ExtResource("1_eifxg")
 fluid_renderer = NodePath("Fluid3DRenderer")
 
 [node name="Fluid3DRenderer" type="MultiMeshInstance3D" parent="." unique_id=1569391493 node_paths=PackedStringArray("fluid")]
-transform = Transform3D(1.9999999, 0, 0, 0, 1.9999999, 0, 0, 0, 1.9999999, -0.028047249, -0.76642656, -0.30018434)
+transform = Transform3D(1.9999999, 0, 0, 0, 1.9999999, 0, 0, 0, 1.9999999, -0.3245194, 1.250918, -0.30018434)
 multimesh = SubResource("MultiMesh_wotrh")
 script = ExtResource("1_op2hx")
 fluid = NodePath("../Fluid3D")

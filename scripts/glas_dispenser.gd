@@ -2,10 +2,10 @@ extends Dispenser
 class_name GlasDispenser
 
 
-var bubble_glas = preload("res://scenes/glas/rapier_bubble_glass.tscn")
-var lavalamp_glas = preload("res://scenes/glas/lavalamp_glass.tscn")
-var normal_glas = preload("res://scenes/glas/normal_glass.tscn")
-var wonky_glas = preload("res://scenes/glas/wonky_glass.tscn")
+var bubble_glas := preload("res://scenes/glas_mesh_rigid/bubble_glass_rigid.tscn")
+var lavalamp_glas := preload("res://scenes/glas_mesh_rigid/lavalamp_glass_rigid.tscn")
+var normal_glas := preload("res://scenes/glas_mesh_rigid/normal_glass_rigid.tscn")
+var wonky_glas := preload("res://scenes/glas_mesh_rigid/wonky_glass_rigid.tscn")
 
 
 enum GlasType {BUBBLE, LAVALAMP, NORMAL, WONKY}
@@ -35,6 +35,7 @@ func set_dispenser_type(new_type : GlasType):
 
 func _unhandled_input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("test4"):
+		print("dispensing bubble glas")
 		set_dispenser_type(GlasType.BUBBLE)
 
 func dispense():

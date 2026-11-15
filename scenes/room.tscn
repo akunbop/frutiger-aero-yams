@@ -213,7 +213,7 @@ mesh = SubResource("CylinderMesh_u2e7o")
 [node name="Dispensers" type="Node3D" parent="." unique_id=1123584474]
 
 [node name="GlasDispenser" type="Node3D" parent="Dispensers" unique_id=1166008151]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.8, 3.7287335, -1.1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.8, 4, -1.105)
 script = ExtResource("13_jxwrd")
 metadata/_custom_type_script = "uid://c6mt5iyldrwjm"
 
