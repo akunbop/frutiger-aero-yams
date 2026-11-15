@@ -23,6 +23,12 @@ collision_bounce = 0.5
 radius = 0.1
 height = 0.25
 
+[sub_resource type="FluidEffect3DSurfaceTensionWCSPH" id="FluidEffect3DSurfaceTensionWCSPH_dbp7g"]
+boundary_adhesion_coefficient = 2.0
+
+[sub_resource type="FluidEffect3DViscosityArtificial" id="FluidEffect3DViscosityArtificial_dbp7g"]
+boundary_adhesion_coefficient = 2.0
+
 [node name="Fluid" type="Node3D" unique_id=1687291188]
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1420106374]
@@ -82,6 +88,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.14548874, 0, -0.0948839)
 transform = Transform3D(1.9999999, 0, 0, 0, 1.9999999, 0, 0, 0, 1.9999999, 0.33926278, -0.76642656, 0.048527576)
 
 [node name="Fluid3D" parent="BlueLiquid2" index="1" unique_id=1827769903]
+effects = Array[Resource]([SubResource("FluidEffect3DSurfaceTensionWCSPH_dbp7g"), SubResource("FluidEffect3DViscosityArtificial_dbp7g")])
 points = PackedVector3Array(0, 0, 0, 0.1, 0, 0, -0.1, 0, 0, 0, 0, 0.1, 0, 0, -0.1, 0, 0.1, 0)
 transform = Transform3D(1.9999999, 0, 0, 0, 1.9999999, 0, 0, 0, 1.9999999, 0.33926278, -0.76642656, 0.048527576)
 
