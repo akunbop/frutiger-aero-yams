@@ -1,66 +1,47 @@
-[gd_scene format=3 uid="uid://2xqrgyb6mafr"]
+[gd_scene format=3 uid="uid://byexgkwglsybe"]
 
-[ext_resource type="PackedScene" uid="uid://cvo5kl18j6ddm" path="res://assets/room/room.glb" id="1_36trf"]
-[ext_resource type="Material" uid="uid://1tqrvbpcuxrw" path="res://assets/materials/light_blue.tres" id="2_14vil"]
-[ext_resource type="Material" uid="uid://faisbwnvqdq3" path="res://assets/materials/blue.tres" id="2_85yof"]
-[ext_resource type="Material" uid="uid://py2pq5bdknjr" path="res://assets/materials/blue_light.tres" id="2_ffxv4"]
-[ext_resource type="Material" uid="uid://cwp6drddoq81q" path="res://assets/materials/green.tres" id="5_jn645"]
-[ext_resource type="Material" uid="uid://vrhqwbjbo2jt" path="res://assets/materials/white.tres" id="6_qvc4m"]
+[ext_resource type="PackedScene" uid="uid://c6bm7iv7aqbgo" path="res://meshes/atom.glb" id="1_ybpoa"]
+[ext_resource type="PackedScene" uid="uid://drpb1optrvn1e" path="res://meshes/ceiling_lamp.glb" id="2_qtoah"]
+[ext_resource type="PackedScene" uid="uid://dubljimryeqdu" path="res://meshes/chair.glb" id="3_eom3m"]
+[ext_resource type="PackedScene" uid="uid://dw6ybj31qa6ab" path="res://meshes/chris_window_support_1.glb" id="4_tk5fv"]
+[ext_resource type="PackedScene" uid="uid://tm55bikvqdjx" path="res://meshes/chris_window_support_2.glb" id="5_w68ji"]
+[ext_resource type="PackedScene" uid="uid://cuxxdsfva8xyd" path="res://meshes/desk.glb" id="6_23wr2"]
+[ext_resource type="PackedScene" uid="uid://bw77cxggu1new" path="res://meshes/front_panel.glb" id="7_3j2fx"]
+[ext_resource type="PackedScene" uid="uid://dol35vhnup66g" path="res://meshes/side_panel.glb" id="8_dynfe"]
+[ext_resource type="PackedScene" uid="uid://b0sq52jgugljn" path="res://meshes/window_support.glb" id="9_vfrn5"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_x574m"]
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_katsu"]
 sky_top_color = Color(0, 0.7490196, 1, 1)
 sky_horizon_color = Color(0.19607843, 0.8039216, 0.19607843, 1)
 sky_curve = 0.037500024
 ground_bottom_color = Color(0.5647059, 0.93333334, 0.5647059, 1)
 
 [sub_resource type="Sky" id="Sky_h3j13"]
-sky_material = SubResource("ProceduralSkyMaterial_x574m")
+sky_material = SubResource("ProceduralSkyMaterial_katsu")
 
-[sub_resource type="Environment" id="Environment_u2e7o"]
+[sub_resource type="Environment" id="Environment_jxwrd"]
 background_mode = 2
 sky = SubResource("Sky_h3j13")
 
-[node name="room" unique_id=80860655 instance=ExtResource("1_36trf")]
+[node name="Node3D" type="Node3D" unique_id=1832449439]
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." index="0" unique_id=173783595]
-environment = SubResource("Environment_u2e7o")
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1796354092]
+environment = SubResource("Environment_jxwrd")
 
-[node name="Cube" parent="." index="1" unique_id=1308985793]
-surface_material_override/0 = ExtResource("2_14vil")
+[node name="atom" parent="." unique_id=413837089 instance=ExtResource("1_ybpoa")]
 
-[node name="Cube_003" parent="." index="3" unique_id=506394860]
-surface_material_override/0 = ExtResource("2_85yof")
-surface_material_override/1 = ExtResource("2_ffxv4")
-surface_material_override/2 = ExtResource("2_ffxv4")
+[node name="ceiling_lamp" parent="." unique_id=1365693210 instance=ExtResource("2_qtoah")]
 
-[node name="Cylinder_004" parent="." index="4" unique_id=1399454940]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.0380802)
-surface_material_override/0 = ExtResource("2_14vil")
+[node name="chair" parent="." unique_id=208566501 instance=ExtResource("3_eom3m")]
 
-[node name="Icosphere_003" parent="." index="5" unique_id=108145598]
-surface_material_override/0 = ExtResource("6_qvc4m")
+[node name="chris_window_support_1" parent="." unique_id=1340718652 instance=ExtResource("4_tk5fv")]
 
-[node name="Plane" parent="." index="6" unique_id=2027640172]
-surface_material_override/0 = ExtResource("6_qvc4m")
+[node name="chris_window_support_2" parent="." unique_id=1952709410 instance=ExtResource("5_w68ji")]
 
-[node name="Plane_003" parent="." index="8" unique_id=84561615]
-surface_material_override/0 = ExtResource("2_85yof")
+[node name="desk" parent="." unique_id=301069911 instance=ExtResource("6_23wr2")]
 
-[node name="Plane_004" parent="." index="9" unique_id=1461958665]
-surface_material_override/0 = ExtResource("2_85yof")
+[node name="front_panel" parent="." unique_id=676248972 instance=ExtResource("7_3j2fx")]
 
-[node name="Plane_005" parent="." index="10" unique_id=2052311787]
-surface_material_override/0 = ExtResource("2_ffxv4")
+[node name="side_panel" parent="." unique_id=1683527620 instance=ExtResource("8_dynfe")]
 
-[node name="Plane_006" parent="." index="11" unique_id=1623502086]
-surface_material_override/0 = ExtResource("2_14vil")
-
-[node name="Plane_007" parent="." index="12" unique_id=169544540]
-surface_material_override/0 = ExtResource("5_jn645")
-surface_material_override/1 = ExtResource("6_qvc4m")
-
-[node name="Plane_008" parent="." index="13" unique_id=1278666961]
-surface_material_override/0 = ExtResource("2_ffxv4")
-
-[node name="Camera3D" type="Camera3D" parent="." index="14" unique_id=1922647094]
-transform = Transform3D(-1, 0, -8.742277e-08, -4.80038e-08, 0.83575696, 0.54909945, 7.306419e-08, 0.54909945, -0.83575696, 0, 4.055316, -3.918707)
+[node name="window_support" parent="." unique_id=763367709 instance=ExtResource("9_vfrn5")]
