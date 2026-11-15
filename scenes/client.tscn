@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://5u6mygemlgjp"]
+
+[ext_resource type="Script" uid="uid://c84rxt1wxdp27" path="res://scripts/client.gd" id="1_1t5vp"]
+[ext_resource type="Texture2D" uid="uid://co3d6jhblteht" path="res://assets/objects/placeholder/client1.png" id="2_4tr0r"]
+[ext_resource type="StyleBox" uid="uid://c7ipt21db7bai" path="res://assets/objects/placeholder/client_progress_bar_happy.tres" id="3_da3od"]
+[ext_resource type="AudioStream" uid="uid://btpcukb65ce7n" path="res://assets/sounds/placeholder/angry-customer.ogg" id="4_dipmf"]
+[ext_resource type="AudioStream" uid="uid://3nr36nmdscb5" path="res://assets/sounds/placeholder/customer-ordering.ogg" id="5_5q6u5"]
+[ext_resource type="AudioStream" uid="uid://ipybsmquakin" path="res://assets/sounds/placeholder/confused-client.ogg" id="6_umycy"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u2e7o"]
+bg_color = Color(0.709963, 0.90257716, 0.9999998, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.61615235, 0.8436723, 0.90588224, 1)
+border_blend = true
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[node name="Client" type="Node2D" unique_id=450858511]
+script = ExtResource("1_1t5vp")
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=182788325]
+offset_left = -101.0
+offset_top = -101.0
+offset_right = 101.0
+offset_bottom = 101.0
+texture_normal = ExtResource("2_4tr0r")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureButton" unique_id=114427949]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -16.0
+offset_right = 16.0
+offset_bottom = 33.0
+grow_horizontal = 2
+size_flags_horizontal = 0
+alignment = 1
+
+[node name="Label" type="Label" parent="TextureButton/VBoxContainer" unique_id=909416943]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+text = "Arrr"
+
+[node name="ProgressBar" type="ProgressBar" parent="TextureButton/VBoxContainer" unique_id=210950975]
+custom_minimum_size = Vector2(0, 6)
+layout_mode = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_u2e7o")
+theme_override_styles/fill = ExtResource("3_da3od")
+show_percentage = false
+
+[node name="AngrySound" type="AudioStreamPlayer" parent="." unique_id=1172022178]
+stream = ExtResource("4_dipmf")
+
+[node name="OrderSound" type="AudioStreamPlayer" parent="." unique_id=1681059130]
+stream = ExtResource("5_5q6u5")
+
+[node name="Confused" type="AudioStreamPlayer" parent="." unique_id=1830458261]
+stream = ExtResource("6_umycy")
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

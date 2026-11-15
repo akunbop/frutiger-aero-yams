@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://wrq7oko061p8"]
+
+[ext_resource type="PackedScene" uid="uid://dufkdsdvm1fwj" path="res://scenes/blue_liquid.tscn" id="2_0va8q"]
+[ext_resource type="PackedScene" uid="uid://iey1yycejash" path="res://assets/glass/wonky_glass.glb" id="3_dbp7g"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_u2e7o"]
+size = Vector3(0.111529544, 0.013745118, 0.055987548)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_u2e7o"]
+emission_shape_offset = Vector3(0.1, 0.02, 0.1)
+spread = 15.0
+initial_velocity_min = 0.19999999
+initial_velocity_max = 0.5
+turbulence_noise_strength = 0.1
+turbulence_noise_scale = 0.1
+collision_mode = 1
+collision_friction = 0.01
+collision_bounce = 0.5
+
+[sub_resource type="SphereMesh" id="SphereMesh_cvepl"]
+radius = 0.1
+height = 0.25
+
+[node name="Fluid" type="Node3D" unique_id=1687291188]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1420106374]
+transform = Transform3D(1, 0, 0, 0, 0.8699434, 0.49315166, 0, -0.49315166, 0.8699434, 0, 0.50303316, 2.1765509)
+
+[node name="wonky_glass" parent="." unique_id=339466124 instance=ExtResource("3_dbp7g")]
+transform = Transform3D(18.99, 0, 0, 0, 18.99, 0, 0, 0, 18.99, 0.19131821, -2.3818524, -0.012124777)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wonky_glass" unique_id=1103645914]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wonky_glass/StaticBody3D" unique_id=1142791579]
+transform = Transform3D(0.99999976, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, -0.0030976068, -0.0045853555, -0.0008514456)
+visible = false
+shape = SubResource("BoxShape3D_u2e7o")
+
+[node name="CollisionShape3D6" type="GPUParticlesCollisionBox3D" parent="wonky_glass/StaticBody3D" unique_id=480385]
+transform = Transform3D(0.9999617, -0.0087265335, 0, 0.0087265335, 0.9999617, 0, 0, 0, 0.99999976, -0.0030976068, -0.0045853555, -0.0008514456)
+size = Vector3(0.11, 0.05, 0.06)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="wonky_glass/StaticBody3D" unique_id=331547186]
+transform = Transform3D(-4.3711367e-08, -0.99999976, 0, 0.99999976, -4.3711367e-08, 0, 0, 0, 0.99999976, 0.032948714, 0.04432258, -0.0008514456)
+visible = false
+shape = SubResource("BoxShape3D_u2e7o")
+
+[node name="CollisionShape3D7" type="GPUParticlesCollisionBox3D" parent="wonky_glass/StaticBody3D" unique_id=492815188]
+transform = Transform3D(-4.3711367e-08, -0.99999976, 0, 0.99999976, -4.3711367e-08, 0, 0, 0, 0.99999976, 0.04072459, 0.044, -0.0009999999)
+size = Vector3(0.11, 0.025449218, 0.06)
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="wonky_glass/StaticBody3D" unique_id=631773404]
+transform = Transform3D(-4.3711367e-08, -0.99999976, 0, 0.99999976, -4.3711367e-08, 0, 0, 0, 0.99999976, -0.032029025, 0.04432258, -0.0008514456)
+visible = false
+shape = SubResource("BoxShape3D_u2e7o")
+
+[node name="CollisionShape3D8" type="GPUParticlesCollisionBox3D" parent="wonky_glass/StaticBody3D" unique_id=791076559]
+transform = Transform3D(-4.3711367e-08, -0.99999976, 0, 0.99999976, -4.3711367e-08, 0, 0, 0, 0.99999976, -0.038188692, 0.044, -0.0009999999)
+size = Vector3(0.11, 0.0246875, 0.06)
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="wonky_glass/StaticBody3D" unique_id=487315525]
+transform = Transform3D(1.9106842e-15, 4.3711374e-08, -0.99999976, 0.99999976, -4.371136e-08, 0, -4.371136e-08, -0.99999976, -4.3711374e-08, 0.0015490865, 0.04432258, -0.03148949)
+visible = false
+shape = SubResource("BoxShape3D_u2e7o")
+
+[node name="CollisionShape3D9" type="GPUParticlesCollisionBox3D" parent="wonky_glass/StaticBody3D" unique_id=206186184]
+transform = Transform3D(1.910685e-15, 4.3711367e-08, 0.99999976, 0.99999976, -4.3711367e-08, 0, 4.3711367e-08, 0.99999976, -4.3711367e-08, 0.0012367256, 0.044, -0.038817797)
+size = Vector3(0.11, 0.02706787, 0.06)
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="wonky_glass/StaticBody3D" unique_id=1332849016]
+transform = Transform3D(1.9106842e-15, 4.371137e-08, -0.99999976, 0.99999976, -4.3711356e-08, 0, -4.3711356e-08, -0.99999976, -4.371137e-08, 0.00044352282, 0.04432258, 0.027768988)
+visible = false
+shape = SubResource("BoxShape3D_u2e7o")
+
+[node name="CollisionShape3D10" type="GPUParticlesCollisionBox3D" parent="wonky_glass/StaticBody3D" unique_id=268617439]
+transform = Transform3D(1.910685e-15, 4.3711367e-08, 0.99999976, 0.99999976, -4.3711367e-08, 0, 4.3711367e-08, 0.99999976, -4.3711367e-08, 0.0012367256, 0.044, 0.03404852)
+size = Vector3(0.11, 0.02227539, 0.06)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=861206281]
+transform = Transform3D(1, 0, 0, 0, 0.6524048, 0.7578707, 0, -0.7578707, 0.6524048, 0, 2.7992613, 3.4089878)
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="." unique_id=1885859439]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.111, 1, -0.048)
+emitting = false
+amount = 100
+lifetime = 300.0
+one_shot = true
+explosiveness = 1.0
+fixed_fps = 0
+collision_base_size = 0.2
+visibility_aabb = AABB(-0.25, -3.449567, -0.25, 0.5, 3.699567, 0.5)
+process_material = SubResource("ParticleProcessMaterial_u2e7o")
+draw_pass_1 = SubResource("SphereMesh_cvepl")
+
+[node name="BlueLiquid" parent="." unique_id=412552048 instance=ExtResource("2_0va8q")]

@@ -1,0 +1,362 @@
+[gd_scene format=3 uid="uid://bflcta7de7eqw"]
+
+[ext_resource type="Texture2D" uid="uid://cwfymfwgc7bec" path="res://assets/objects/placeholder/work-station.png" id="1_gvmby"]
+[ext_resource type="Script" uid="uid://ryh3ue7l3tyi" path="res://scripts/main.gd" id="1_vwd6b"]
+[ext_resource type="Texture2D" uid="uid://blkvxoqimeq2c" path="res://assets/objects/placeholder/tiles-background.png" id="2_fuv46"]
+[ext_resource type="Script" uid="uid://b0wq44512m11g" path="res://scripts/cooker.gd" id="4_5samq"]
+[ext_resource type="Script" uid="uid://7ddkg3emg66k" path="res://scripts/plate.gd" id="4_yydua"]
+[ext_resource type="AudioStream" uid="uid://caoitbfcvq2j4" path="res://assets/sounds/placeholder/music.ogg" id="5_cr4i2"]
+[ext_resource type="AudioStream" uid="uid://ctpinovegqoka" path="res://assets/sounds/placeholder/meat-cooking.ogg" id="5_yydua"]
+[ext_resource type="AudioStream" uid="uid://cxbgnuykd41uv" path="res://assets/sounds/placeholder/meat-burned.ogg" id="6_mjdam"]
+[ext_resource type="Script" uid="uid://cwvbnmb13rlcl" path="res://scripts/cola_machine.gd" id="8_bo6dc"]
+[ext_resource type="AudioStream" uid="uid://coaga7a2bwnns" path="res://assets/sounds/placeholder/cola-machine-filling.ogg" id="9_tmdaf"]
+[ext_resource type="AudioStream" uid="uid://balxk76xwfkw7" path="res://assets/sounds/placeholder/money-appended.ogg" id="9_xydv1"]
+[ext_resource type="AudioStream" uid="uid://v57n7hujkspu" path="res://assets/sounds/placeholder/money-taken.ogg" id="10_fns72"]
+[ext_resource type="Script" uid="uid://cdfevim825qpf" path="res://scripts/clients_manager.gd" id="10_tmdaf"]
+[ext_resource type="AudioStream" uid="uid://cmadtaq3rnh0n" path="res://assets/sounds/placeholder/trash.ogg" id="11_bo6dc"]
+[ext_resource type="PackedScene" uid="uid://5u6mygemlgjp" path="res://scenes/client.tscn" id="11_y26ic"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gvmby"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gqf2t"]
+bg_color = Color(0.91293794, 0.45422888, 1.540184e-06, 0.5882353)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.9524109, 0.52449167, 5.198121e-06, 0.8666667)
+border_blend = true
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u2e7o"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h3j13"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x574m"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r514k"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8j77d"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fba5u"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_316lj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v1ou3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u2e7o"]
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.31801978, 0.31801984, 0.31801954, 1)
+border_blend = true
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h3j13"]
+bg_color = Color(0.89021975, 0.47546643, 0, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[node name="Bar" type="Node2D" unique_id=456688558 node_paths=PackedStringArray("plate", "cooker")]
+script = ExtResource("1_vwd6b")
+plate = NodePath("Plate")
+cooker = NodePath("Cooker")
+
+[node name="ClientsManager" type="Node2D" parent="." unique_id=157797692]
+position = Vector2(988, 229)
+script = ExtResource("10_tmdaf")
+client_scene = ExtResource("11_y26ic")
+
+[node name="Position1" type="Node2D" parent="ClientsManager" unique_id=502993554]
+position = Vector2(-130, -10)
+
+[node name="Position2" type="Node2D" parent="ClientsManager" unique_id=1919485506]
+position = Vector2(-300, -10)
+
+[node name="Position3" type="Node2D" parent="ClientsManager" unique_id=184186533]
+position = Vector2(-470, -10)
+
+[node name="Position4" type="Node2D" parent="ClientsManager" unique_id=219323430]
+position = Vector2(-640, -10)
+
+[node name="Spawentimer" type="Timer" parent="ClientsManager" unique_id=5856832]
+wait_time = 10.0
+autostart = true
+
+[node name="Station" type="TextureRect" parent="." unique_id=2048926227]
+custom_minimum_size = Vector2(1024, 512)
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+texture = ExtResource("1_gvmby")
+expand_mode = 1
+
+[node name="TrashButton" type="Button" parent="." unique_id=735368564]
+offset_left = 9.0
+offset_top = 462.0
+offset_right = 68.0
+offset_bottom = 493.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_gvmby")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_gvmby")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_gvmby")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_gvmby")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_gvmby")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_gvmby")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_gvmby")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_gvmby")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_gvmby")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_gvmby")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_gvmby")
+text = "TRASH
+"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=705902098]
+layer = -2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1823334157]
+custom_minimum_size = Vector2(1024, 512)
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_fuv46")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer" unique_id=1852559028]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -120.0
+offset_right = 120.0
+offset_bottom = 40.0
+grow_horizontal = 2
+
+[node name="Balance" type="Label" parent="CanvasLayer/HBoxContainer" unique_id=164122579]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_gqf2t")
+text = "Balance: 5€"
+
+[node name="DrinksSold" type="Label" parent="CanvasLayer/HBoxContainer" unique_id=1269195427]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_gqf2t")
+text = "Total Drinks sold: 5"
+
+[node name="IngredientsLayer" type="Node2D" parent="." unique_id=1122515220]
+
+[node name="TomatoButton" type="Button" parent="IngredientsLayer" unique_id=2051513133]
+offset_left = 24.0
+offset_top = 350.0
+offset_right = 92.0
+offset_bottom = 381.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_u2e7o")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_u2e7o")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_u2e7o")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_u2e7o")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_u2e7o")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_u2e7o")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_u2e7o")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_u2e7o")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_u2e7o")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_u2e7o")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_u2e7o")
+text = "Tomato"
+
+[node name="LettuceButton" type="Button" parent="IngredientsLayer" unique_id=142550833]
+offset_left = 167.0
+offset_top = 352.0
+offset_right = 235.0
+offset_bottom = 383.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_h3j13")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_h3j13")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_h3j13")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_h3j13")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_h3j13")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_h3j13")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_h3j13")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_h3j13")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_h3j13")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_h3j13")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_h3j13")
+text = "Lettuce"
+
+[node name="MeatButton" type="Button" parent="IngredientsLayer" unique_id=1009100318]
+offset_left = 324.0
+offset_top = 357.0
+offset_right = 392.0
+offset_bottom = 388.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_x574m")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_x574m")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_x574m")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_x574m")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_x574m")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_x574m")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_x574m")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_x574m")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_x574m")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_x574m")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_x574m")
+text = "Meat
+"
+
+[node name="CheeseButton" type="Button" parent="IngredientsLayer" unique_id=456050963]
+offset_left = 474.0
+offset_top = 359.0
+offset_right = 542.0
+offset_bottom = 390.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_r514k")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_r514k")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_r514k")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_r514k")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_r514k")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_r514k")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_r514k")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_r514k")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_r514k")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_r514k")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_r514k")
+text = "Cheese
+
+"
+
+[node name="BunButton" type="Button" parent="IngredientsLayer" unique_id=2057434860]
+offset_left = 596.0
+offset_top = 354.0
+offset_right = 664.0
+offset_bottom = 385.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8j77d")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_8j77d")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_8j77d")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_8j77d")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_8j77d")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_8j77d")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_8j77d")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_8j77d")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_8j77d")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_8j77d")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_8j77d")
+text = "Bun
+
+
+"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="IngredientsLayer" unique_id=1964956765]
+
+[node name="Plate" type="Node2D" parent="." unique_id=1638283782]
+position = Vector2(479, 288)
+script = ExtResource("4_yydua")
+
+[node name="Burger" type="Node2D" parent="Plate" unique_id=612776105]
+
+[node name="Button" type="Button" parent="Plate" unique_id=1461882035]
+offset_left = -95.0
+offset_top = -34.0
+offset_right = 96.0
+offset_bottom = 32.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_fba5u")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_fba5u")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_fba5u")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_fba5u")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_fba5u")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_fba5u")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_fba5u")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_fba5u")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_fba5u")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_fba5u")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_fba5u")
+
+[node name="Cooker" type="Node2D" parent="." unique_id=1182823890]
+position = Vector2(830, 324)
+script = ExtResource("4_5samq")
+
+[node name="MeatTexture" type="Sprite2D" parent="Cooker" unique_id=1079851863]
+scale = Vector2(0.6, 0.6)
+
+[node name="CookedMeatButton" type="Button" parent="Cooker" unique_id=1286328448]
+offset_left = -110.0
+offset_top = -47.0
+offset_right = 127.0
+offset_bottom = 40.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_316lj")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_316lj")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_316lj")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_316lj")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_316lj")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_316lj")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_316lj")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_316lj")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_316lj")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_316lj")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_316lj")
+
+[node name="CookingSound" type="AudioStreamPlayer" parent="Cooker" unique_id=692718904]
+stream = ExtResource("5_yydua")
+
+[node name="BurnedSound" type="AudioStreamPlayer" parent="Cooker" unique_id=1158159045]
+stream = ExtResource("6_mjdam")
+
+[node name="ColaMachine" type="Node2D" parent="." unique_id=471013792]
+position = Vector2(117, 236)
+script = ExtResource("8_bo6dc")
+
+[node name="Cola" type="Sprite2D" parent="ColaMachine" unique_id=114487582]
+scale = Vector2(0.6, 0.6)
+
+[node name="MachineButton" type="Button" parent="ColaMachine" unique_id=813983744]
+offset_left = -107.0
+offset_top = -174.0
+offset_right = 103.0
+offset_bottom = 63.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_v1ou3")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_v1ou3")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_v1ou3")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_v1ou3")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_v1ou3")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_v1ou3")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_v1ou3")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_v1ou3")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_v1ou3")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_v1ou3")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_v1ou3")
+
+[node name="ProgressBar" type="ProgressBar" parent="ColaMachine" unique_id=1679474687]
+offset_left = -115.0
+offset_top = -191.0
+offset_right = 114.0
+offset_bottom = -179.0
+theme_override_styles/background = SubResource("StyleBoxFlat_u2e7o")
+theme_override_styles/fill = SubResource("StyleBoxFlat_h3j13")
+show_percentage = false
+
+[node name="ColaFilling" type="AudioStreamPlayer" parent="ColaMachine" unique_id=90672912]
+stream = ExtResource("9_tmdaf")
+
+[node name="MusicStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=476887941]
+stream = ExtResource("5_cr4i2")
+autoplay = true
+
+[node name="MoneyAppendedSound" type="AudioStreamPlayer" parent="." unique_id=1732675428]
+stream = ExtResource("9_xydv1")
+
+[node name="MoneyRemovedSound" type="AudioStreamPlayer" parent="." unique_id=1797797646]
+stream = ExtResource("10_fns72")
+
+[node name="TrashSound" type="AudioStreamPlayer" parent="." unique_id=239623768]
+stream = ExtResource("11_bo6dc")
+
+[connection signal="timeout" from="ClientsManager/Spawentimer" to="ClientsManager" method="_on_spawentimer_timeout"]
+[connection signal="pressed" from="TrashButton" to="." method="_on_trash_button_pressed"]
+[connection signal="pressed" from="Plate/Button" to="." method="_on_plate_button_pressed"]
