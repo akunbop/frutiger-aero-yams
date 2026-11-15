@@ -1,0 +1,37 @@
+[gd_resource type="VisualShader" format=3 uid="uid://b7jt0rdup87ql"]
+
+[ext_resource type="Texture2D" uid="uid://bw3ktiascbijs" path="res://assets/materials/frutiger_aero.png" id="1_dpubx"]
+
+[sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_kyhfa"]
+texture = ExtResource("1_dpubx")
+texture_type = 1
+
+[sub_resource type="VisualShaderNodeColorParameter" id="VisualShaderNodeColorParameter_dpubx"]
+parameter_name = "ColorParameter"
+default_value_enabled = true
+default_value = Color(0.11764706, 0.48235294, 0.11764706, 1)
+
+[sub_resource type="VisualShaderNodeFloatParameter" id="VisualShaderNodeFloatParameter_dpubx"]
+parameter_name = "FloatParameter"
+hint = 1
+max = 16.0
+default_value_enabled = true
+default_value = 5.0
+
+[sub_resource type="VisualShaderNodeFloatParameter" id="VisualShaderNodeFloatParameter_kyhfa"]
+parameter_name = "FloatParameter2"
+hint = 1
+max = 16.0
+default_value_enabled = true
+default_value = 5.0
+
+[resource]
+nodes/vertex/0/position = Vector2(900, 240)
+nodes/vertex/2/node = SubResource("VisualShaderNodeTexture_kyhfa")
+nodes/vertex/2/position = Vector2(-280, 160)
+nodes/vertex/3/node = SubResource("VisualShaderNodeColorParameter_dpubx")
+nodes/vertex/3/position = Vector2(-40, 200)
+nodes/vertex/4/node = SubResource("VisualShaderNodeFloatParameter_dpubx")
+nodes/vertex/4/position = Vector2(400, 320)
+nodes/vertex/5/node = SubResource("VisualShaderNodeFloatParameter_kyhfa")
+nodes/vertex/5/position = Vector2(60, 480)

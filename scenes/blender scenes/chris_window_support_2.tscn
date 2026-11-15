@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://c8ykaul8ij430"]
+
+[ext_resource type="PackedScene" uid="uid://tm55bikvqdjx" path="res://meshes/chris_window_support_2.glb" id="1_gbrcc"]
+[ext_resource type="Material" uid="uid://vrhqwbjbo2jt" path="res://assets/materials/white.tres" id="2_k51bj"]
+
+[node name="chris_window_support_2" unique_id=1952709410 instance=ExtResource("1_gbrcc")]
+
+[node name="Cube_002" parent="." index="0" unique_id=344922953]
+surface_material_override/0 = ExtResource("2_k51bj")
