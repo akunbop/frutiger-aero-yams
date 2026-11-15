@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://byexgkwglsybe"]
 
 [ext_resource type="Script" uid="uid://ibdkh17b45ct" path="res://scenes/room.gd" id="1_eom3m"]
-[ext_resource type="Material" uid="uid://cwp6drddoq81q" path="res://assets/materials/green.tres" id="1_qtoah"]
 [ext_resource type="PackedScene" uid="uid://dq7nfnmrwysfm" path="res://scenes/blender scenes/atom.tscn" id="1_ybpoa"]
 [ext_resource type="PackedScene" uid="uid://bk1c18e8dmopx" path="res://scenes/blender scenes/ceiling_lamp.tscn" id="2_qtoah"]
 [ext_resource type="Material" uid="uid://vrhqwbjbo2jt" path="res://assets/materials/white.tres" id="2_vfrn5"]
 [ext_resource type="PackedScene" uid="uid://cdhel7ctb0yx0" path="res://scenes/blender scenes/chair.tscn" id="3_eom3m"]
+[ext_resource type="Material" uid="uid://bai7e2jjcdl8e" path="res://assets/materials/shaders/sealife_shader.tres" id="4_spkk5"]
 [ext_resource type="PackedScene" uid="uid://7xo4trfv57s0" path="res://scenes/blender scenes/chris_window_support_1.tscn" id="4_tk5fv"]
 [ext_resource type="PackedScene" uid="uid://c8ykaul8ij430" path="res://scenes/blender scenes/chris_window_support_2.tscn" id="5_w68ji"]
 [ext_resource type="PackedScene" uid="uid://cd8m3ebw2iucg" path="res://scenes/blender scenes/desk.tscn" id="6_23wr2"]
@@ -40,7 +40,7 @@ size = Vector2(50, 50)
 data = PackedVector3Array(25, 0, 25, -25, 0, 25, 25, 0, -25, -25, 0, 25, -25, 0, -25, 25, 0, -25)
 
 [sub_resource type="BoxMesh" id="BoxMesh_u2e7o"]
-size = Vector3(1, 7.8, 35.04248)
+size = Vector3(1, 7.8, 19.569489)
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_u2e7o"]
 height = 0.1
@@ -49,6 +49,10 @@ height = 0.1
 material = ExtResource("15_3j2fx")
 radius = 0.05
 height = 0.1
+
+[sub_resource type="QuadMesh" id="QuadMesh_u2e7o"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_h3j13"]
 
 [node name="Node3D" type="Node3D" unique_id=1832449439 node_paths=PackedStringArray("glas_dispenser", "fluid_dispenser", "syrup_dispenser", "topping_dispenser", "deco_dispenser")]
 script = ExtResource("1_eom3m")
@@ -76,16 +80,16 @@ surface_material_override/0 = ExtResource("2_vfrn5")
 shape = SubResource("ConcavePolygonShape3D_ybpoa")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="Meshes" unique_id=1900875535]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4228, 3.8406067, -7.2766657)
+transform = Transform3D(-0.9998764, 0, 0.01571963, 0, 1, 0, -0.01571963, 0, -0.9998764, 11.286346, 3.8406067, 1.4027424)
 cast_shadow = 0
 mesh = SubResource("BoxMesh_u2e7o")
-surface_material_override/0 = ExtResource("1_qtoah")
+surface_material_override/0 = ExtResource("4_spkk5")
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="Meshes" unique_id=490067891]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.313102, 3.8406067, -7.2766657)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.313102, 3.8406067, -6.3326807)
 cast_shadow = 0
 mesh = SubResource("BoxMesh_u2e7o")
-surface_material_override/0 = ExtResource("1_qtoah")
+surface_material_override/0 = ExtResource("4_spkk5")
 
 [node name="atom2" parent="Meshes" unique_id=413837089 instance=ExtResource("1_ybpoa")]
 
@@ -197,3 +201,7 @@ metadata/_custom_type_script = "uid://bj1lct1xewos5"
 
 [node name="FrutigerPerson" parent="." unique_id=1934764386 instance=ExtResource("18_katsu")]
 transform = Transform3D(-0.0012773708, 0, 0.99999917, 0, 1, 0, -0.99999917, 0, -0.0012773708, 0.09910327, 2.4449487, 1.9679179)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1055547242]
+mesh = SubResource("QuadMesh_u2e7o")
+surface_material_override/0 = SubResource("ShaderMaterial_h3j13")
