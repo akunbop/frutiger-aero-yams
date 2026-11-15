@@ -1,6 +1,8 @@
 extends Node3D
 class_name Dispenser
 
+signal dispensed()
+
 func dispense():
-	return
+	dispensed.emit(self)
 	

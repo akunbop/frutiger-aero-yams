@@ -72,7 +72,7 @@ _data = {
 
 [node name="FrutigerPerson" unique_id=1934764386 instance=ExtResource("1_1kjt3")]
 
-[node name="Cylinder" parent="." index="0" unique_id=1186380280]
+[node name="Cylinder" parent="." index="0" unique_id=475063973]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
 surface_material_override/0 = SubResource("StandardMaterial3D_dwqs4")
 
