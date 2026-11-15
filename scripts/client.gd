@@ -43,6 +43,6 @@ func serve(item):
 func _on_texture_button_pressed() -> void:
 	serve(get_parent().get_parent().get_parent().item_held)
 
-func set_order(new_order):
-	order = new_order
-	$TextureButton/VBoxContainer/Label.text = order
+#func set_order(new_order):
+	#order = new_order
+	#$TextureButton/VBoxContainer/Label.text = order

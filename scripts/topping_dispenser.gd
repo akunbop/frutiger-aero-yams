@@ -1,7 +1,7 @@
 extends Dispenser
 class_name ToppingDispenser
 
-@export var topping_meshes := preload("res://scenes/blue_liquid.tscn")
+#@export var topping_meshes := preload("res://scenes/blue_liquid.tscn")
 @export var gold_fish : Mesh
 @export var boba : Mesh
 @export var icecubes: Mesh
@@ -37,9 +37,9 @@ func _unhandled_input(event: InputEvent) -> void:
 		set_dispenser_type(DispenserType.ICECUBES)
 		dispense()
 
-func dispense():
-	super.dispense()
-	var instance : Fluid = topping_meshes.instantiate()
-	add_child(instance)
-	instance.fluid_renderer.multimesh.mesh = current_mesh
-	print(instance.fluid_renderer.multimesh.mesh)
+#func dispense():
+	#super.dispense()
+	#var instance : Fluid = topping_meshes.instantiate()
+	#add_child(instance)
+	#instance.fluid_renderer.multimesh.mesh = current_mesh
+	#print(instance.fluid_renderer.multimesh.mesh)
