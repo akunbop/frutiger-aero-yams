@@ -29,11 +29,12 @@ visible_instance_count = 15
 mesh = SubResource("SphereMesh_0va8q")
 buffer = PackedFloat32Array(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0.05, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0.1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0.15, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0.2, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.05, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0.05, 0, 1, 0, 0.05, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0.1, 0, 1, 0, 0.05, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0.15, 0, 1, 0, 0.05, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0.2, 0, 1, 0, 0.05, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0.05, 0, 1, 0, 0.1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0.1, 0, 1, 0, 0.1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0.15, 0, 1, 0, 0.1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0.2, 0, 1, 0, 0.1, 0, 0, 1, 0, 0, 0, 0, 0)
 
-[sub_resource type="FluidEffect3DSurfaceTensionWCSPH" id="FluidEffect3DSurfaceTensionWCSPH_dbp7g"]
-boundary_adhesion_coefficient = 2.0
-
 [sub_resource type="FluidEffect3DViscosityArtificial" id="FluidEffect3DViscosityArtificial_dbp7g"]
 boundary_adhesion_coefficient = 2.0
+
+[sub_resource type="FluidEffect3DSurfaceTensionWCSPH" id="FluidEffect3DSurfaceTensionWCSPH_jxwrd"]
+fluid_tension_coefficient = 2.0
+boundary_adhesion_coefficient = 1.0
 
 [node name="BlueLiquid" type="Node3D" unique_id=412552048 node_paths=PackedStringArray("fluid_renderer")]
 script = ExtResource("1_eifxg")
@@ -48,7 +49,7 @@ metadata/_custom_type_script = "uid://b5of3xx28r0r3"
 
 [node name="Fluid3D" type="Fluid3D" parent="." unique_id=1041388639]
 density = 2.0
-effects = Array[Resource]([SubResource("FluidEffect3DSurfaceTensionWCSPH_dbp7g"), SubResource("FluidEffect3DViscosityArtificial_dbp7g"), null])
+effects = Array[Resource]([SubResource("FluidEffect3DViscosityArtificial_dbp7g"), SubResource("FluidEffect3DSurfaceTensionWCSPH_jxwrd")])
 points = PackedVector3Array(0, 0, 0, 0.05, 0, 0, 0.1, 0, 0, 0.15, 0, 0, 0.2, 0, 0, 0, 0.05, 0, 0.05, 0.05, 0, 0.1, 0.05, 0, 0.15, 0.05, 0, 0.2, 0.05, 0, 0, 0.1, 0, 0.05, 0.1, 0, 0.1, 0.1, 0, 0.15, 0.1, 0, 0.2, 0.1, 0)
 transform = Transform3D(1.9999999, 0, 0, 0, 1.9999999, 0, 0, 0, 1.9999999, -0.028047249, -0.76642656, -0.30018434)
 script = ExtResource("2_eifxg")

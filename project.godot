@@ -21,6 +21,10 @@ window/size/viewport_height=512
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
+[editor]
+
+script/quality/msaa_2d=2
+
 [file_customization]
 
 folder_colors={
@@ -61,6 +65,5 @@ rapier/fluid/fluid_particle_radius_3d=0.05
 [rendering]
 
 rendering_device/driver.windows="d3d12"
-anti_aliasing/quality/msaa_2d=2
 anti_aliasing/quality/msaa_3d=2
 scaling_3d/mode=2

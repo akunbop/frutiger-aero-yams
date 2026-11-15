@@ -6,5 +6,3 @@ extends Node3D
 @export var syrup_dispenser : Dispenser
 @export var topping_dispenser : Dispenser
 @export var deco_dispenser : Dispenser
-
-	
