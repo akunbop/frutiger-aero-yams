@@ -1,0 +1,202 @@
+[gd_scene format=3 uid="uid://bqcv74o20qooj"]
+
+[ext_resource type="Texture2D" uid="uid://c582ngqnbqi0b" path="res://assets/2d/Glas_5.png" id="1_c20no"]
+[ext_resource type="Texture2D" uid="uid://c2nbwn6ksfgqi" path="res://assets/2d/Glas_1.png" id="2_1xo2p"]
+[ext_resource type="Texture2D" uid="uid://w1jteel5tcou" path="res://assets/2d/Goldfish.png" id="3_i7cp2"]
+[ext_resource type="Texture2D" uid="uid://b3fu8fnk5k2ha" path="res://assets/2d/Boba.png" id="4_63lps"]
+[ext_resource type="Texture2D" uid="uid://bh8n7q37s3hyj" path="res://assets/2d/Eiswurfel.png" id="5_4jud0"]
+
+[node name="Control" type="Control" unique_id=1227607570]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1135885973]
+follow_viewport_enabled = true
+
+[node name="VBoxContainer" type="HBoxContainer" parent="CanvasLayer" unique_id=339925408]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -61.0
+offset_top = -63.0
+offset_right = 61.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+
+[node name="LinksButton" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=535643215]
+custom_minimum_size = Vector2(20, 20)
+custom_maximum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 10
+text = "L"
+
+[node name="RechtsButton" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=1405243434]
+custom_minimum_size = Vector2(20, 20)
+custom_maximum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 10
+text = "R"
+
+[node name="NormalesGlasButton" type="TextureButton" parent="CanvasLayer/VBoxContainer" unique_id=1119977684]
+custom_minimum_size = Vector2(20, 20)
+custom_maximum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 10
+texture_normal = ExtResource("1_c20no")
+texture_pressed = ExtResource("1_c20no")
+texture_hover = ExtResource("1_c20no")
+texture_disabled = ExtResource("1_c20no")
+texture_focused = ExtResource("1_c20no")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="LavaGlassButton" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=1635147421]
+custom_minimum_size = Vector2(20, 20)
+custom_maximum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 10
+text = "LavaGlas
+"
+alignment = 0
+text_overrun_behavior = 1
+
+[node name="BubbleGlassButton" type="TextureButton" parent="CanvasLayer/VBoxContainer" unique_id=1856662193]
+custom_minimum_size = Vector2(20, 20)
+custom_maximum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 10
+texture_normal = ExtResource("2_1xo2p")
+texture_pressed = ExtResource("2_1xo2p")
+texture_hover = ExtResource("2_1xo2p")
+texture_disabled = ExtResource("2_1xo2p")
+texture_focused = ExtResource("2_1xo2p")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="WonkyGlassButton" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=448136523]
+custom_minimum_size = Vector2(20, 20)
+custom_maximum_size = Vector2(25, 20)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 10
+text = "W"
+
+[node name="GoldfishButton" type="TextureButton" parent="CanvasLayer/VBoxContainer" unique_id=1078163312]
+custom_minimum_size = Vector2(20, 20)
+custom_maximum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+texture_normal = ExtResource("3_i7cp2")
+texture_pressed = ExtResource("3_i7cp2")
+texture_hover = ExtResource("3_i7cp2")
+texture_disabled = ExtResource("3_i7cp2")
+texture_focused = ExtResource("3_i7cp2")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="BobaButton" type="TextureButton" parent="CanvasLayer/VBoxContainer" unique_id=2085057674]
+custom_minimum_size = Vector2(20, 20)
+custom_maximum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+texture_normal = ExtResource("4_63lps")
+texture_pressed = ExtResource("4_63lps")
+texture_hover = ExtResource("4_63lps")
+texture_disabled = ExtResource("4_63lps")
+texture_focused = ExtResource("4_63lps")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="IceCubeButton" type="TextureButton" parent="CanvasLayer/VBoxContainer" unique_id=241624196]
+custom_minimum_size = Vector2(20, 20)
+custom_maximum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 10
+texture_normal = ExtResource("5_4jud0")
+texture_pressed = ExtResource("5_4jud0")
+texture_hover = ExtResource("5_4jud0")
+texture_disabled = ExtResource("5_4jud0")
+texture_focused = ExtResource("5_4jud0")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Fluid1Button" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=471642354]
+custom_minimum_size = Vector2(20, 20)
+custom_maximum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 10
+text = "F"
+
+[node name="Fluid2Button" type="TextureButton" parent="CanvasLayer/VBoxContainer" unique_id=1503161036]
+custom_minimum_size = Vector2(20, 20)
+custom_maximum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 10
+texture_normal = ExtResource("5_4jud0")
+texture_pressed = ExtResource("5_4jud0")
+texture_hover = ExtResource("5_4jud0")
+texture_disabled = ExtResource("5_4jud0")
+texture_focused = ExtResource("5_4jud0")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Fluid3Button" type="TextureButton" parent="CanvasLayer/VBoxContainer" unique_id=422807806]
+custom_minimum_size = Vector2(20, 20)
+custom_maximum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 10
+texture_normal = ExtResource("5_4jud0")
+texture_pressed = ExtResource("5_4jud0")
+texture_hover = ExtResource("5_4jud0")
+texture_disabled = ExtResource("5_4jud0")
+texture_focused = ExtResource("5_4jud0")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="IceCubeButton12" type="TextureButton" parent="CanvasLayer/VBoxContainer" unique_id=1518423176]
+custom_minimum_size = Vector2(20, 20)
+custom_maximum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 10
+texture_normal = ExtResource("5_4jud0")
+texture_pressed = ExtResource("5_4jud0")
+texture_hover = ExtResource("5_4jud0")
+texture_disabled = ExtResource("5_4jud0")
+texture_focused = ExtResource("5_4jud0")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="IceCubeButton10" type="TextureButton" parent="CanvasLayer/VBoxContainer" unique_id=2105283451]
+custom_minimum_size = Vector2(20, 20)
+custom_maximum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 10
+texture_normal = ExtResource("5_4jud0")
+texture_pressed = ExtResource("5_4jud0")
+texture_hover = ExtResource("5_4jud0")
+texture_disabled = ExtResource("5_4jud0")
+texture_focused = ExtResource("5_4jud0")
+ignore_texture_size = true
+stretch_mode = 0
