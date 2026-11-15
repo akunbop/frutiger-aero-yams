@@ -46,6 +46,17 @@ _subresources={
 "use_external/fallback_path": "res://assets/materials/frutiger_aero_colors_glass.tres",
 "use_external/path": "uid://kpsh57o1rf2l"
 }
+},
+"meshes": {
+"bubble_glass_no_col_Torus": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://scenes/glas_mesh/bubble_glass_no_col_Torus.res",
+"save_to_file/path": "uid://ud5fay5yinev"
+}
 }
 }
 gltf/naming_version=2
