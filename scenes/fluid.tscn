@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://wrq7oko061p8"]
 
+[ext_resource type="PackedScene" uid="uid://dufkdsdvm1fwj" path="res://scenes/blue_liquid.tscn" id="2_0va8q"]
 [ext_resource type="PackedScene" uid="uid://iey1yycejash" path="res://assets/glass/wonky_glass.glb" id="3_dbp7g"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_u2e7o"]
@@ -80,6 +81,7 @@ transform = Transform3D(1, 0, 0, 0, 0.6524048, 0.7578707, 0, -0.7578707, 0.65240
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="." unique_id=1885859439]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.111, 1, -0.048)
+emitting = false
 amount = 100
 lifetime = 300.0
 one_shot = true
@@ -89,3 +91,5 @@ collision_base_size = 0.2
 visibility_aabb = AABB(-0.25, -3.449567, -0.25, 0.5, 3.699567, 0.5)
 process_material = SubResource("ParticleProcessMaterial_u2e7o")
 draw_pass_1 = SubResource("SphereMesh_cvepl")
+
+[node name="BlueLiquid" parent="." unique_id=412552048 instance=ExtResource("2_0va8q")]
