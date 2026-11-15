@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cdhel7ctb0yx0"]
+
+[ext_resource type="PackedScene" uid="uid://dubljimryeqdu" path="res://meshes/chair.glb" id="1_rbfck"]
+[ext_resource type="Material" uid="uid://py2pq5bdknjr" path="res://assets/materials/blue_light.tres" id="2_5hwxe"]
+[ext_resource type="Material" uid="uid://faisbwnvqdq3" path="res://assets/materials/blue.tres" id="3_bjcs7"]
+
+[node name="chair" unique_id=208566501 instance=ExtResource("1_rbfck")]
+
+[node name="Cylinder_005" parent="." index="0" unique_id=1390409451]
+surface_material_override/0 = ExtResource("2_5hwxe")
+surface_material_override/1 = ExtResource("3_bjcs7")

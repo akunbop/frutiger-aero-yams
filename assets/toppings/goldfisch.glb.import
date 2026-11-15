@@ -61,6 +61,17 @@ _subresources={
 "use_external/fallback_path": "res://assets/materials/goldfisch_flossen.tres",
 "use_external/path": "uid://bce1g3vovkvxh"
 }
+},
+"meshes": {
+"goldfisch_Cube_003": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://assets/objects/toppings/goldfisch_Cube_003.res",
+"save_to_file/path": "uid://dus7rxqi7ntmm"
+}
 }
 }
 gltf/naming_version=2

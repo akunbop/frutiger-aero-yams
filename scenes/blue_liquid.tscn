@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dufkdsdvm1fwj"]
 
+[ext_resource type="Script" uid="uid://wda01btpcjwp" path="res://scripts/liquid.gd" id="1_eifxg"]
 [ext_resource type="Script" uid="uid://b5of3xx28r0r3" path="res://addons/godot-rapier3d/fluid_3d_renderer.gd" id="1_op2hx"]
 [ext_resource type="Script" uid="uid://cp70bhsm14jeq" path="res://addons/godot-rapier3d/fluid_3d_box.gd" id="2_eifxg"]
 
@@ -33,7 +34,9 @@ boundary_adhesion_coefficient = 2.0
 [sub_resource type="FluidEffect3DViscosityArtificial" id="FluidEffect3DViscosityArtificial_dbp7g"]
 boundary_adhesion_coefficient = 2.0
 
-[node name="BlueLiquid" type="Node3D" unique_id=412552048]
+[node name="BlueLiquid" type="Node3D" unique_id=412552048 node_paths=PackedStringArray("fluid_renderer")]
+script = ExtResource("1_eifxg")
+fluid_renderer = NodePath("Fluid3DRenderer")
 
 [node name="Fluid3DRenderer" type="MultiMeshInstance3D" parent="." unique_id=1569391493 node_paths=PackedStringArray("fluid")]
 transform = Transform3D(1.9999999, 0, 0, 0, 1.9999999, 0, 0, 0, 1.9999999, -0.028047249, -0.76642656, -0.30018434)
