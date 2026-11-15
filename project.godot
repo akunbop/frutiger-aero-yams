@@ -35,3 +35,6 @@ folder_colors={
 [rendering]
 
 rendering_device/driver.windows="d3d12"
+anti_aliasing/quality/msaa_2d=2
+anti_aliasing/quality/msaa_3d=2
+scaling_3d/mode=2

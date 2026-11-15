@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://2xqrgyb6mafr"]
+
+[ext_resource type="PackedScene" uid="uid://cvo5kl18j6ddm" path="res://assets/room/room.glb" id="1_36trf"]
+[ext_resource type="Material" uid="uid://1tqrvbpcuxrw" path="res://assets/materials/light_blue.tres" id="2_14vil"]
+[ext_resource type="Material" uid="uid://faisbwnvqdq3" path="res://assets/materials/blue.tres" id="2_85yof"]
+[ext_resource type="Material" uid="uid://py2pq5bdknjr" path="res://assets/materials/blue_light.tres" id="2_ffxv4"]
+[ext_resource type="Material" uid="uid://cwp6drddoq81q" path="res://assets/materials/green.tres" id="5_jn645"]
+[ext_resource type="Material" uid="uid://vrhqwbjbo2jt" path="res://assets/materials/white.tres" id="6_qvc4m"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_x574m"]
+sky_top_color = Color(0, 0.7490196, 1, 1)
+sky_horizon_color = Color(0.19607843, 0.8039216, 0.19607843, 1)
+sky_curve = 0.037500024
+ground_bottom_color = Color(0.5647059, 0.93333334, 0.5647059, 1)
+
+[sub_resource type="Sky" id="Sky_h3j13"]
+sky_material = SubResource("ProceduralSkyMaterial_x574m")
+
+[sub_resource type="Environment" id="Environment_u2e7o"]
+background_mode = 2
+sky = SubResource("Sky_h3j13")
+
+[node name="room" unique_id=80860655 instance=ExtResource("1_36trf")]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." index="0" unique_id=173783595]
+environment = SubResource("Environment_u2e7o")
+
+[node name="Cube" parent="." index="1" unique_id=1308985793]
+surface_material_override/0 = ExtResource("2_14vil")
+
+[node name="Cube_003" parent="." index="3" unique_id=506394860]
+surface_material_override/0 = ExtResource("2_85yof")
+surface_material_override/1 = ExtResource("2_ffxv4")
+surface_material_override/2 = ExtResource("2_ffxv4")
+
+[node name="Cylinder_004" parent="." index="4" unique_id=1399454940]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.0380802)
+surface_material_override/0 = ExtResource("2_14vil")
+
+[node name="Icosphere_003" parent="." index="5" unique_id=108145598]
+surface_material_override/0 = ExtResource("6_qvc4m")
+
+[node name="Plane" parent="." index="6" unique_id=2027640172]
+surface_material_override/0 = ExtResource("6_qvc4m")
+
+[node name="Plane_003" parent="." index="8" unique_id=84561615]
+surface_material_override/0 = ExtResource("2_85yof")
+
+[node name="Plane_004" parent="." index="9" unique_id=1461958665]
+surface_material_override/0 = ExtResource("2_85yof")
+
+[node name="Plane_005" parent="." index="10" unique_id=2052311787]
+surface_material_override/0 = ExtResource("2_ffxv4")
+
+[node name="Plane_006" parent="." index="11" unique_id=1623502086]
+surface_material_override/0 = ExtResource("2_14vil")
+
+[node name="Plane_007" parent="." index="12" unique_id=169544540]
+surface_material_override/0 = ExtResource("5_jn645")
+surface_material_override/1 = ExtResource("6_qvc4m")
+
+[node name="Plane_008" parent="." index="13" unique_id=1278666961]
+surface_material_override/0 = ExtResource("2_ffxv4")
+
+[node name="Camera3D" type="Camera3D" parent="." index="14" unique_id=1922647094]
+transform = Transform3D(-1, 0, -8.742277e-08, -4.80038e-08, 0.83575696, 0.54909945, 7.306419e-08, 0.54909945, -0.83575696, 0, 4.055316, -3.918707)
