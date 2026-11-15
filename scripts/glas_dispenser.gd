@@ -11,6 +11,8 @@ var wonky_glas := preload("res://scenes/glas_mesh_rigid/wonky_glass_rigid.tscn")
 enum GlasType {BUBBLE, LAVALAMP, NORMAL, WONKY}
 var _type : GlasType = GlasType.NORMAL
 var current_glas : PackedScene
+var array_id : int = 0
+
 #
 #func _ready() -> void:
 	#set_dispenser_type(GlasType.NORMAL)
@@ -51,7 +53,6 @@ func set_dispenser_type(new_type : GlasType):
 		#set_dispenser_type(GlasType.WONKY)
 
 func dispense():
-	super.dispense()
 	var instance = current_glas.instantiate()
 	add_child(instance)
 
