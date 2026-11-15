@@ -7,6 +7,7 @@ extends RigidBody3D
 @export var topping_type = ToppingDispenser.DispenserType
 @export var deco_type = DecoDispenser.DecoType
 
+
 ## Treat the body as having no mass of its own.
 @export var massless: bool = false:
 	get:

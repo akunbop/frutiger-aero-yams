@@ -2,10 +2,10 @@ extends Node3D
 
 @export_category("dispenser")
 @export var glas_dispenser : GlasDispenser 
-@export var fluid_dispenser : Dispenser
-@export var syrup_dispenser : Dispenser
+@export var fluid_dispenser : FluidDispenser
+@export var syrup_dispenser : SyrupDispenser
 @export var topping_dispenser : ToppingDispenser
-@export var deco_dispenser : Dispenser
+@export var deco_dispenser : DecoDispenser
 
 @export var belts : Array[Belt] = []
 var glasses : Array[Glass] = []
@@ -22,8 +22,11 @@ func GlasStationEntered(body: Node3D) -> void:
 		body.glas_type = glas_dispenser._type
 
 func fluid_dispenser_dispensed(dispenser: FluidDispenser):
-	return
-
+	var num = dispenser.array_id
+	var glas_ref : Glass = belts[num].current_glas
+	glas_ref.fluid_type = dispenser.fluid_type
+	
+	
 func FluidStationEntered(body: Node3D) -> void:
 	pass # Replace with function body.
 
@@ -32,16 +35,22 @@ func MixerStationEntered(body: Node3D) -> void:
 	pass # Replace with function body.
 
 func syrup_dispenser_dispensed(dispenser: SyrupDispenser):
-	return
-
+	var num = dispenser.array_id
+	var glas_ref : Glass = belts[num].current_glas
+	glas_ref.syrup_type = dispenser.syrup_type
+	
 func ToppingStationEntered(body: Node3D) -> void:
 	pass # Replace with function body.
-
+	
 func topping_dispenser_dispensed(dispenser: ToppingDispenser):
-	return
-
+	var num = dispenser.array_id
+	var glas_ref : Glass = belts[num].current_glas
+	glas_ref.topping_type = dispenser._type
+	
 func DecoStationEntered(body: Node3D) -> void:
 	pass # Replace with function body.
 
 func deco_dispenser_dispensed(dispenser: DecoDispenser):
-	return
+	var num = dispenser.array_id
+	var glas_ref : Glass = belts[num].current_glas
+	glas_ref.deco_type = dispenser.deco_type
