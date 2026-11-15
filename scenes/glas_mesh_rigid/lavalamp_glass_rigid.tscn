@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://1ry5kcfsmbgw"]
 
 [ext_resource type="Script" uid="uid://biv5gpq46pxiq" path="res://addons/godot-rapier3d/custom_nodes/rapier_rigid_body_3d.gd" id="1_lgl8v"]
-[ext_resource type="ArrayMesh" uid="uid://vxlp51010y58" path="res://scenes/glas_mesh/lavalamp_glass_no_col_Circle_004.res" id="2_580j8"]
+[ext_resource type="ArrayMesh" uid="uid://kljnjmu1v3h8" path="res://scenes/glas_mesh/lavalamp_glass_no_col_Circle_004.res" id="2_580j8"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_u2e7o"]
 
@@ -15,9 +15,9 @@ script = ExtResource("1_lgl8v")
 metadata/_custom_type_script = "uid://biv5gpq46pxiq"
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1383619317]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 0, 0, 0)
 mesh = ExtResource("2_580j8")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=99283419]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0.266, 0)
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 0, 0.7795919, 0)
 shape = SubResource("CylinderShape3D_qxvct")

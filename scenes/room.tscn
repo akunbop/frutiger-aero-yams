@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://dq65t5eeuwwfq" path="res://scenes/blender scenes/side_panel.tscn" id="8_dynfe"]
 [ext_resource type="PackedScene" uid="uid://cul0rschwowlf" path="res://scenes/blender scenes/window_support.tscn" id="9_vfrn5"]
 [ext_resource type="Script" uid="uid://c6mt5iyldrwjm" path="res://scripts/glas_dispenser.gd" id="13_jxwrd"]
+[ext_resource type="Script" uid="uid://dmbk7q1kd1r8n" path="res://scenes/area_3d.gd" id="13_spkk5"]
 [ext_resource type="Script" uid="uid://bj1lct1xewos5" path="res://scripts/dispenser_script.gd" id="13_w68ji"]
 [ext_resource type="ArrayMesh" uid="uid://dus7rxqi7ntmm" path="res://assets/objects/topping_glb_scene/goldfisch_Cube_003.res" id="14_3j2fx"]
 [ext_resource type="Script" uid="uid://dpoitmmix53r4" path="res://scripts/topping_dispenser.gd" id="14_23wr2"]
@@ -43,6 +44,22 @@ data = PackedVector3Array(25, 0, 25, -25, 0, 25, 25, 0, -25, -25, 0, 25, -25, 0,
 size = Vector3(1, 7.8, 35.04248)
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_u2e7o"]
+lightmap_size_hint = Vector2i(17, 9)
+height = 0.1
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_jxwrd"]
+height = 0.1
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_spkk5"]
+height = 0.1
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_yggoe"]
+height = 0.1
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_2ulci"]
+height = 0.1
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_kk8bn"]
 height = 0.1
 
 [sub_resource type="SphereMesh" id="SphereMesh_x4pa0"]
@@ -137,11 +154,25 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.8, 2, -1.105)
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Stations/GlasStation" unique_id=681225010]
 mesh = SubResource("CylinderMesh_u2e7o")
 
+[node name="Area3D" type="Area3D" parent="Stations/GlasStation" unique_id=1449948889]
+script = ExtResource("13_spkk5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Stations/GlasStation/Area3D" unique_id=291528519]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.08862138, 0)
+shape = SubResource("CylinderShape3D_jxwrd")
+
 [node name="FluidStation" type="Node3D" parent="Stations" unique_id=176562863]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2, -0.268)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Stations/FluidStation" unique_id=835014842]
 mesh = SubResource("CylinderMesh_u2e7o")
+
+[node name="Area3D" type="Area3D" parent="Stations/FluidStation" unique_id=437598004]
+script = ExtResource("13_spkk5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Stations/FluidStation/Area3D" unique_id=1202551949]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.08862138, 0)
+shape = SubResource("CylinderShape3D_spkk5")
 
 [node name="MixerStation" type="Node3D" parent="Stations" unique_id=821756794]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00044608116, 2, 0)
@@ -149,17 +180,38 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00044608116, 2, 0)
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Stations/MixerStation" unique_id=429469694]
 mesh = SubResource("CylinderMesh_u2e7o")
 
+[node name="Area3D" type="Area3D" parent="Stations/MixerStation" unique_id=860099652]
+script = ExtResource("13_spkk5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Stations/MixerStation/Area3D" unique_id=2060480815]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.08862138, 0)
+shape = SubResource("CylinderShape3D_yggoe")
+
 [node name="ToppingStation" type="Node3D" parent="Stations" unique_id=1847399195]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 2, -0.26)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Stations/ToppingStation" unique_id=512288428]
 mesh = SubResource("CylinderMesh_u2e7o")
 
+[node name="Area3D" type="Area3D" parent="Stations/ToppingStation" unique_id=352455885]
+script = ExtResource("13_spkk5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Stations/ToppingStation/Area3D" unique_id=1006982373]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.08862138, 0)
+shape = SubResource("CylinderShape3D_2ulci")
+
 [node name="DekoStation" type="Node3D" parent="Stations" unique_id=563004401]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8, 2, -1.1)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Stations/DekoStation" unique_id=1443841162]
 mesh = SubResource("CylinderMesh_u2e7o")
+
+[node name="Area3D" type="Area3D" parent="Stations/DekoStation" unique_id=598294891]
+script = ExtResource("13_spkk5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Stations/DekoStation/Area3D" unique_id=1338820071]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.08862138, 0)
+shape = SubResource("CylinderShape3D_kk8bn")
 
 [node name="Dispensers" type="Node3D" parent="." unique_id=1123584474]
 
@@ -179,7 +231,7 @@ script = ExtResource("13_w68ji")
 metadata/_custom_type_script = "uid://bj1lct1xewos5"
 
 [node name="ToppingDispenser" type="Node3D" parent="Dispensers" unique_id=926626877]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 5.5237055, -0.26)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 5, -0.26)
 script = ExtResource("14_23wr2")
 topping_meshes = Object(Node3D,"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"physics_interpolation_mode":0,"auto_translate_mode":0,"editor_description":"","transform":Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"script":Resource("res://scripts/liquid.gd"),"fluid_renderer":Object(MultiMeshInstance3D,"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"physics_interpolation_mode":0,"auto_translate_mode":0,"editor_description":"","transform":Transform3D(1.9999999, 0, 0, 0, 1.9999999, 0, 0, 0, 1.9999999, -0.028047323, -0.76642656, -0.30018437),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"layers":1,"sorting_offset":0.0,"sorting_use_aabb_center":true,"material_override":null,"material_overlay":null,"transparency":0.0,"cast_shadow":1,"extra_cull_margin":0.0,"custom_aabb":AABB(0, 0, 0, 0, 0, 0),"lod_bias":1.0,"ignore_occlusion_culling":false,"gi_mode":1,"gi_lightmap_texel_scale":1.0,"visibility_range_begin":0.0,"visibility_range_begin_margin":0.0,"visibility_range_end":0.0,"visibility_range_end_margin":0.0,"visibility_range_fade_mode":0,"multimesh":null,"script":Resource("res://addons/godot-rapier3d/fluid_3d_renderer.gd"),"fluid":Object(Fluid3D,"debug_draw":false,"density":10.0,"lifetime":0.0,"effects":Array[Resource]([null, null, null]),"points":PackedVector3Array(0, 0, 0, 0.05, 0, 0, 0.1, 0, 0, 0.15, 0, 0, 0.2, 0, 0, 0, 0.05, 0, 0.05, 0.05, 0, 0.1, 0.05, 0, 0.15, 0.05, 0, 0.2, 0.05, 0, 0, 0.1, 0, 0.05, 0.1, 0, 0.1, 0.1, 0, 0.15, 0.1, 0, 0.2, 0.1, 0, 0, 0.15, 0, 0.05, 0.15, 0, 0.1, 0.15, 0, 0.15, 0.15, 0, 0.2, 0.15, 0, 0, 0.2, 0, 0.05, 0.2, 0, 0.1, 0.2, 0, 0.15, 0.2, 0, 0.2, 0.2, 0, 0, 0.25, 0, 0.05, 0.25, 0, 0.1, 0.25, 0, 0.15, 0.25, 0, 0.2, 0.25, 0, 0, 0.3, 0, 0.05, 0.3, 0, 0.1, 0.3, 0, 0.15, 0.3, 0, 0.2, 0.3, 0, 0, 0.35, 0, 0.05, 0.35, 0, 0.1, 0.35, 0, 0.15, 0.35, 0, 0.2, 0.35, 0, 0, 0.4, 0, 0.05, 0.4, 0, 0.1, 0.4, 0, 0.15, 0.4, 0, 0.2, 0.4, 0, 0, 0.45000002, 0, 0.05, 0.45000002, 0, 0.1, 0.45000002, 0, 0.15, 0.45000002, 0, 0.2, 0.45000002, 0, 0, 0.5, 0, 0.05, 0.5, 0, 0.1, 0.5, 0, 0.15, 0.5, 0, 0.2, 0.5, 0, 0, 0.55, 0, 0.05, 0.55, 0, 0.1, 0.55, 0, 0.15, 0.55, 0, 0.2, 0.55, 0, 0, 0.6, 0, 0.05, 0.6, 0, 0.1, 0.6, 0, 0.15, 0.6, 0, 0.2, 0.6, 0, 0, 0.65000004, 0, 0.05, 0.65000004, 0, 0.1, 0.65000004, 0, 0.15, 0.65000004, 0, 0.2, 0.65000004, 0, 0, 0.7, 0, 0.05, 0.7, 0, 0.1, 0.7, 0, 0.15, 0.7, 0, 0.2, 0.7, 0, 0, 0.75, 0, 0.05, 0.75, 0, 0.1, 0.75, 0, 0.15, 0.75, 0, 0.2, 0.75, 0, 0, 0.8, 0, 0.05, 0.8, 0, 0.1, 0.8, 0, 0.15, 0.8, 0, 0.2, 0.8, 0, 0, 0.85, 0, 0.05, 0.85, 0, 0.1, 0.85, 0, 0.15, 0.85, 0, 0.2, 0.85, 0, 0, 0.90000004, 0, 0.05, 0.90000004, 0, 0.1, 0.90000004, 0, 0.15, 0.90000004, 0, 0.2, 0.90000004, 0, 0, 0.95, 0, 0.05, 0.95, 0, 0.1, 0.95, 0, 0.15, 0.95, 0, 0.2, 0.95, 0, 0, 0, 0.05, 0.05, 0, 0.05, 0.1, 0, 0.05, 0.15, 0, 0.05, 0.2, 0, 0.05, 0, 0.05, 0.05, 0.05, 0.05, 0.05, 0.1, 0.05, 0.05, 0.15, 0.05, 0.05, 0.2, 0.05, 0.05, 0, 0.1, 0.05, 0.05, 0.1, 0.05, 0.1, 0.1, 0.05, 0.15, 0.1, 0.05, 0.2, 0.1, 0.05, 0, 0.15, 0.05, 0.05, 0.15, 0.05, 0.1, 0.15, 0.05, 0.15, 0.15, 0.05, 0.2, 0.15, 0.05, 0, 0.2, 0.05, 0.05, 0.2, 0.05, 0.1, 0.2, 0.05, 0.15, 0.2, 0.05, 0.2, 0.2, 0.05, 0, 0.25, 0.05, 0.05, 0.25, 0.05, 0.1, 0.25, 0.05, 0.15, 0.25, 0.05, 0.2, 0.25, 0.05, 0, 0.3, 0.05, 0.05, 0.3, 0.05, 0.1, 0.3, 0.05, 0.15, 0.3, 0.05, 0.2, 0.3, 0.05, 0, 0.35, 0.05, 0.05, 0.35, 0.05, 0.1, 0.35, 0.05, 0.15, 0.35, 0.05, 0.2, 0.35, 0.05, 0, 0.4, 0.05, 0.05, 0.4, 0.05, 0.1, 0.4, 0.05, 0.15, 0.4, 0.05, 0.2, 0.4, 0.05, 0, 0.45000002, 0.05, 0.05, 0.45000002, 0.05, 0.1, 0.45000002, 0.05, 0.15, 0.45000002, 0.05, 0.2, 0.45000002, 0.05, 0, 0.5, 0.05, 0.05, 0.5, 0.05, 0.1, 0.5, 0.05, 0.15, 0.5, 0.05, 0.2, 0.5, 0.05, 0, 0.55, 0.05, 0.05, 0.55, 0.05, 0.1, 0.55, 0.05, 0.15, 0.55, 0.05, 0.2, 0.55, 0.05, 0, 0.6, 0.05, 0.05, 0.6, 0.05, 0.1, 0.6, 0.05, 0.15, 0.6, 0.05, 0.2, 0.6, 0.05, 0, 0.65000004, 0.05, 0.05, 0.65000004, 0.05, 0.1, 0.65000004, 0.05, 0.15, 0.65000004, 0.05, 0.2, 0.65000004, 0.05, 0, 0.7, 0.05, 0.05, 0.7, 0.05, 0.1, 0.7, 0.05, 0.15, 0.7, 0.05, 0.2, 0.7, 0.05, 0, 0.75, 0.05, 0.05, 0.75, 0.05, 0.1, 0.75, 0.05, 0.15, 0.75, 0.05, 0.2, 0.75, 0.05, 0, 0.8, 0.05, 0.05, 0.8, 0.05, 0.1, 0.8, 0.05, 0.15, 0.8, 0.05, 0.2, 0.8, 0.05, 0, 0.85, 0.05, 0.05, 0.85, 0.05, 0.1, 0.85, 0.05, 0.15, 0.85, 0.05, 0.2, 0.85, 0.05, 0, 0.90000004, 0.05, 0.05, 0.90000004, 0.05, 0.1, 0.90000004, 0.05, 0.15, 0.90000004, 0.05, 0.2, 0.90000004, 0.05, 0, 0.95, 0.05, 0.05, 0.95, 0.05, 0.1, 0.95, 0.05, 0.15, 0.95, 0.05, 0.2, 0.95, 0.05, 0, 0, 0.1, 0.05, 0, 0.1, 0.1, 0, 0.1, 0.15, 0, 0.1, 0.2, 0, 0.1, 0, 0.05, 0.1, 0.05, 0.05, 0.1, 0.1, 0.05, 0.1, 0.15, 0.05, 0.1, 0.2, 0.05, 0.1, 0, 0.1, 0.1, 0.05, 0.1, 0.1, 0.1, 0.1, 0.1, 0.15, 0.1, 0.1, 0.2, 0.1, 0.1, 0, 0.15, 0.1, 0.05, 0.15, 0.1, 0.1, 0.15, 0.1, 0.15, 0.15, 0.1, 0.2, 0.15, 0.1, 0, 0.2, 0.1, 0.05, 0.2, 0.1, 0.1, 0.2, 0.1, 0.15, 0.2, 0.1, 0.2, 0.2, 0.1, 0, 0.25, 0.1, 0.05, 0.25, 0.1, 0.1, 0.25, 0.1, 0.15, 0.25, 0.1, 0.2, 0.25, 0.1, 0, 0.3, 0.1, 0.05, 0.3, 0.1, 0.1, 0.3, 0.1, 0.15, 0.3, 0.1, 0.2, 0.3, 0.1, 0, 0.35, 0.1, 0.05, 0.35, 0.1, 0.1, 0.35, 0.1, 0.15, 0.35, 0.1, 0.2, 0.35, 0.1, 0, 0.4, 0.1, 0.05, 0.4, 0.1, 0.1, 0.4, 0.1, 0.15, 0.4, 0.1, 0.2, 0.4, 0.1, 0, 0.45000002, 0.1, 0.05, 0.45000002, 0.1, 0.1, 0.45000002, 0.1, 0.15, 0.45000002, 0.1, 0.2, 0.45000002, 0.1, 0, 0.5, 0.1, 0.05, 0.5, 0.1, 0.1, 0.5, 0.1, 0.15, 0.5, 0.1, 0.2, 0.5, 0.1, 0, 0.55, 0.1, 0.05, 0.55, 0.1, 0.1, 0.55, 0.1, 0.15, 0.55, 0.1, 0.2, 0.55, 0.1, 0, 0.6, 0.1, 0.05, 0.6, 0.1, 0.1, 0.6, 0.1, 0.15, 0.6, 0.1, 0.2, 0.6, 0.1, 0, 0.65000004, 0.1, 0.05, 0.65000004, 0.1, 0.1, 0.65000004, 0.1, 0.15, 0.65000004, 0.1, 0.2, 0.65000004, 0.1, 0, 0.7, 0.1, 0.05, 0.7, 0.1, 0.1, 0.7, 0.1, 0.15, 0.7, 0.1, 0.2, 0.7, 0.1, 0, 0.75, 0.1, 0.05, 0.75, 0.1, 0.1, 0.75, 0.1, 0.15, 0.75, 0.1, 0.2, 0.75, 0.1, 0, 0.8, 0.1, 0.05, 0.8, 0.1, 0.1, 0.8, 0.1, 0.15, 0.8, 0.1, 0.2, 0.8, 0.1, 0, 0.85, 0.1, 0.05, 0.85, 0.1, 0.1, 0.85, 0.1, 0.15, 0.85, 0.1, 0.2, 0.85, 0.1, 0, 0.90000004, 0.1, 0.05, 0.90000004, 0.1, 0.1, 0.90000004, 0.1, 0.15, 0.90000004, 0.1, 0.2, 0.90000004, 0.1, 0, 0.95, 0.1, 0.05, 0.95, 0.1, 0.1, 0.95, 0.1, 0.15, 0.95, 0.1, 0.2, 0.95, 0.1, 0, 0, 0.15, 0.05, 0, 0.15, 0.1, 0, 0.15, 0.15, 0, 0.15, 0.2, 0, 0.15, 0, 0.05, 0.15, 0.05, 0.05, 0.15, 0.1, 0.05, 0.15, 0.15, 0.05, 0.15, 0.2, 0.05, 0.15, 0, 0.1, 0.15, 0.05, 0.1, 0.15, 0.1, 0.1, 0.15, 0.15, 0.1, 0.15, 0.2, 0.1, 0.15, 0, 0.15, 0.15, 0.05, 0.15, 0.15, 0.1, 0.15, 0.15, 0.15, 0.15, 0.15, 0.2, 0.15, 0.15, 0, 0.2, 0.15, 0.05, 0.2, 0.15, 0.1, 0.2, 0.15, 0.15, 0.2, 0.15, 0.2, 0.2, 0.15, 0, 0.25, 0.15, 0.05, 0.25, 0.15, 0.1, 0.25, 0.15, 0.15, 0.25, 0.15, 0.2, 0.25, 0.15, 0, 0.3, 0.15, 0.05, 0.3, 0.15, 0.1, 0.3, 0.15, 0.15, 0.3, 0.15, 0.2, 0.3, 0.15, 0, 0.35, 0.15, 0.05, 0.35, 0.15, 0.1, 0.35, 0.15, 0.15, 0.35, 0.15, 0.2, 0.35, 0.15, 0, 0.4, 0.15, 0.05, 0.4, 0.15, 0.1, 0.4, 0.15, 0.15, 0.4, 0.15, 0.2, 0.4, 0.15, 0, 0.45000002, 0.15, 0.05, 0.45000002, 0.15, 0.1, 0.45000002, 0.15, 0.15, 0.45000002, 0.15, 0.2, 0.45000002, 0.15, 0, 0.5, 0.15, 0.05, 0.5, 0.15, 0.1, 0.5, 0.15, 0.15, 0.5, 0.15, 0.2, 0.5, 0.15, 0, 0.55, 0.15, 0.05, 0.55, 0.15, 0.1, 0.55, 0.15, 0.15, 0.55, 0.15, 0.2, 0.55, 0.15, 0, 0.6, 0.15, 0.05, 0.6, 0.15, 0.1, 0.6, 0.15, 0.15, 0.6, 0.15, 0.2, 0.6, 0.15, 0, 0.65000004, 0.15, 0.05, 0.65000004, 0.15, 0.1, 0.65000004, 0.15, 0.15, 0.65000004, 0.15, 0.2, 0.65000004, 0.15, 0, 0.7, 0.15, 0.05, 0.7, 0.15, 0.1, 0.7, 0.15, 0.15, 0.7, 0.15, 0.2, 0.7, 0.15, 0, 0.75, 0.15, 0.05, 0.75, 0.15, 0.1, 0.75, 0.15, 0.15, 0.75, 0.15, 0.2, 0.75, 0.15, 0, 0.8, 0.15, 0.05, 0.8, 0.15, 0.1, 0.8, 0.15, 0.15, 0.8, 0.15, 0.2, 0.8, 0.15, 0, 0.85, 0.15, 0.05, 0.85, 0.15, 0.1, 0.85, 0.15, 0.15, 0.85, 0.15, 0.2, 0.85, 0.15, 0, 0.90000004, 0.15, 0.05, 0.90000004, 0.15, 0.1, 0.90000004, 0.15, 0.15, 0.90000004, 0.15, 0.2, 0.90000004, 0.15, 0, 0.95, 0.15, 0.05, 0.95, 0.15, 0.1, 0.95, 0.15, 0.15, 0.95, 0.15, 0.2, 0.95, 0.15, 0, 0, 0.2, 0.05, 0, 0.2, 0.1, 0, 0.2, 0.15, 0, 0.2, 0.2, 0, 0.2, 0, 0.05, 0.2, 0.05, 0.05, 0.2, 0.1, 0.05, 0.2, 0.15, 0.05, 0.2, 0.2, 0.05, 0.2, 0, 0.1, 0.2, 0.05, 0.1, 0.2, 0.1, 0.1, 0.2, 0.15, 0.1, 0.2, 0.2, 0.1, 0.2, 0, 0.15, 0.2, 0.05, 0.15, 0.2, 0.1, 0.15, 0.2, 0.15, 0.15, 0.2, 0.2, 0.15, 0.2, 0, 0.2, 0.2, 0.05, 0.2, 0.2, 0.1, 0.2, 0.2, 0.15, 0.2, 0.2, 0.2, 0.2, 0.2, 0, 0.25, 0.2, 0.05, 0.25, 0.2, 0.1, 0.25, 0.2, 0.15, 0.25, 0.2, 0.2, 0.25, 0.2, 0, 0.3, 0.2, 0.05, 0.3, 0.2, 0.1, 0.3, 0.2, 0.15, 0.3, 0.2, 0.2, 0.3, 0.2, 0, 0.35, 0.2, 0.05, 0.35, 0.2, 0.1, 0.35, 0.2, 0.15, 0.35, 0.2, 0.2, 0.35, 0.2, 0, 0.4, 0.2, 0.05, 0.4, 0.2, 0.1, 0.4, 0.2, 0.15, 0.4, 0.2, 0.2, 0.4, 0.2, 0, 0.45000002, 0.2, 0.05, 0.45000002, 0.2, 0.1, 0.45000002, 0.2, 0.15, 0.45000002, 0.2, 0.2, 0.45000002, 0.2, 0, 0.5, 0.2, 0.05, 0.5, 0.2, 0.1, 0.5, 0.2, 0.15, 0.5, 0.2, 0.2, 0.5, 0.2, 0, 0.55, 0.2, 0.05, 0.55, 0.2, 0.1, 0.55, 0.2, 0.15, 0.55, 0.2, 0.2, 0.55, 0.2, 0, 0.6, 0.2, 0.05, 0.6, 0.2, 0.1, 0.6, 0.2, 0.15, 0.6, 0.2, 0.2, 0.6, 0.2, 0, 0.65000004, 0.2, 0.05, 0.65000004, 0.2, 0.1, 0.65000004, 0.2, 0.15, 0.65000004, 0.2, 0.2, 0.65000004, 0.2, 0, 0.7, 0.2, 0.05, 0.7, 0.2, 0.1, 0.7, 0.2, 0.15, 0.7, 0.2, 0.2, 0.7, 0.2, 0, 0.75, 0.2, 0.05, 0.75, 0.2, 0.1, 0.75, 0.2, 0.15, 0.75, 0.2, 0.2, 0.75, 0.2, 0, 0.8, 0.2, 0.05, 0.8, 0.2, 0.1, 0.8, 0.2, 0.15, 0.8, 0.2, 0.2, 0.8, 0.2, 0, 0.85, 0.2, 0.05, 0.85, 0.2, 0.1, 0.85, 0.2, 0.15, 0.85, 0.2, 0.2, 0.85, 0.2, 0, 0.90000004, 0.2, 0.05, 0.90000004, 0.2, 0.1, 0.90000004, 0.2, 0.15, 0.90000004, 0.2, 0.2, 0.90000004, 0.2, 0, 0.95, 0.2, 0.05, 0.95, 0.2, 0.1, 0.95, 0.2, 0.15, 0.95, 0.2, 0.2, 0.95, 0.2),"collision_layer":1,"collision_mask":1,"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"physics_interpolation_mode":0,"auto_translate_mode":0,"editor_description":"","transform":Transform3D(1.9999999, 0, 0, 0, 1.9999999, 0, 0, 0, 1.9999999, -0.028047249, -0.76642656, -0.30018434),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"script":Resource("res://addons/godot-rapier3d/fluid_3d_box.gd"),"height":20,"width":5,"depth":5)
 ,"metadata/_custom_type_script":"uid://b5of3xx28r0r3")
@@ -197,3 +249,9 @@ metadata/_custom_type_script = "uid://bj1lct1xewos5"
 
 [node name="FrutigerPerson" parent="." unique_id=1934764386 instance=ExtResource("18_katsu")]
 transform = Transform3D(-0.0012773708, 0, 0.99999917, 0, 1, 0, -0.99999917, 0, -0.0012773708, 0.09910327, 2.4449487, 1.9679179)
+
+[connection signal="body_entered" from="Stations/GlasStation/Area3D" to="." method="GlasStationEntered"]
+[connection signal="body_entered" from="Stations/FluidStation/Area3D" to="." method="FluidStationEntered"]
+[connection signal="body_entered" from="Stations/MixerStation/Area3D" to="." method="MixerStationEntered"]
+[connection signal="body_entered" from="Stations/ToppingStation/Area3D" to="." method="ToppingStationEntered"]
+[connection signal="body_entered" from="Stations/DekoStation/Area3D" to="." method="DecoStationEntered"]

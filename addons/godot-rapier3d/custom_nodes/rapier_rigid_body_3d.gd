@@ -1,5 +1,6 @@
-class_name RapierRigidBody3D
+class_name Glass
 extends RigidBody3D
+
 
 ## Treat the body as having no mass of its own.
 @export var massless: bool = false:
