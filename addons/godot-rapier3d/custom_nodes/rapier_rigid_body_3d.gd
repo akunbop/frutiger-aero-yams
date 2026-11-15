@@ -1,5 +1,11 @@
-class_name RapierRigidBody3D
+class_name Glass
 extends RigidBody3D
+
+@export var glas_type = GlasDispenser.GlasType
+@export var fluid_type = FluidDispenser.FluidType
+@export var syrup_type = SyrupDispenser.SyrupType
+@export var topping_type = ToppingDispenser.DispenserType
+@export var deco_type = DecoDispenser.DecoType
 
 ## Treat the body as having no mass of its own.
 @export var massless: bool = false:
