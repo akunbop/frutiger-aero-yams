@@ -36,9 +36,21 @@ func set_dispenser_type(new_type : GlasType):
 
 
 func _unhandled_input(event: InputEvent) -> void:
-	if Input.is_action_just_pressed("test4"):
+	if event.is_action_pressed("test4"):
 		print("dispensing bubble glas")
 		set_dispenser_type(GlasType.BUBBLE)
+
+	elif event.is_action_pressed("test5"):
+		print("dispensing lavalamp glas")
+		set_dispenser_type(GlasType.LAVALAMP)
+
+	elif event.is_action_pressed("test6"):
+		print("dispensing normal glas")
+		set_dispenser_type(GlasType.NORMAL)
+
+	elif event.is_action_pressed("test7"):
+		print("dispensing wonky glas")
+		set_dispenser_type(GlasType.WONKY)
 
 func dispense():
 	var instance = current_glas.instantiate()
