@@ -3,9 +3,11 @@
 [ext_resource type="Script" uid="uid://ibdkh17b45ct" path="res://scenes/room.gd" id="1_eom3m"]
 [ext_resource type="Material" uid="uid://cwp6drddoq81q" path="res://assets/materials/green.tres" id="1_qtoah"]
 [ext_resource type="PackedScene" uid="uid://dq7nfnmrwysfm" path="res://scenes/blender scenes/atom.tscn" id="1_ybpoa"]
+[ext_resource type="Texture2D" uid="uid://c582ngqnbqi0b" path="res://assets/2d/Glas_5.png" id="2_0tws2"]
 [ext_resource type="Script" uid="uid://dfpbnhmg8x4vm" path="res://scenes/conveyer_belt.gd" id="2_jxwrd"]
 [ext_resource type="PackedScene" uid="uid://bk1c18e8dmopx" path="res://scenes/blender scenes/ceiling_lamp.tscn" id="2_qtoah"]
 [ext_resource type="Material" uid="uid://vrhqwbjbo2jt" path="res://assets/materials/white.tres" id="2_vfrn5"]
+[ext_resource type="Texture2D" uid="uid://c2nbwn6ksfgqi" path="res://assets/2d/Glas_1.png" id="3_2ftkj"]
 [ext_resource type="PackedScene" uid="uid://cdhel7ctb0yx0" path="res://scenes/blender scenes/chair.tscn" id="3_eom3m"]
 [ext_resource type="PackedScene" uid="uid://7xo4trfv57s0" path="res://scenes/blender scenes/chris_window_support_1.tscn" id="4_tk5fv"]
 [ext_resource type="PackedScene" uid="uid://c8ykaul8ij430" path="res://scenes/blender scenes/chris_window_support_2.tscn" id="5_w68ji"]
@@ -21,6 +23,9 @@
 [ext_resource type="Material" uid="uid://ddad6e6sowp31" path="res://assets/materials/black_boba_material.tres" id="15_3j2fx"]
 [ext_resource type="ArrayMesh" uid="uid://di53jgymlamet" path="res://assets/objects/topping_glb_scene/ice_cube_Cube_002.res" id="16_dynfe"]
 [ext_resource type="PackedScene" uid="uid://cmh4esnqplfp4" path="res://assets/frutiger_person.tscn" id="18_katsu"]
+[ext_resource type="Texture2D" uid="uid://w1jteel5tcou" path="res://assets/2d/Goldfish.png" id="22_mc3m6"]
+[ext_resource type="Texture2D" uid="uid://b3fu8fnk5k2ha" path="res://assets/2d/Boba.png" id="23_mc3m6"]
+[ext_resource type="Texture2D" uid="uid://bh8n7q37s3hyj" path="res://assets/2d/Eiswurfel.png" id="24_a5qmg"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_katsu"]
 sky_top_color = Color(0, 0.7490196, 1, 1)
@@ -84,6 +89,193 @@ environment = SubResource("Environment_jxwrd")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1324789898]
 transform = Transform3D(-1, 7.1054274e-15, -8.7422784e-08, -5.4686428e-08, 0.78019214, 0.6255399, 6.8206575e-08, 0.6255399, -0.78019214, 0, 6.2243385, -2.904725)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Camera3D" unique_id=1773082533]
+follow_viewport_enabled = true
+
+[node name="VBoxContainer" type="HBoxContainer" parent="Camera3D/CanvasLayer" unique_id=1468205476]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -61.0
+offset_top = -63.0
+offset_right = 61.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+
+[node name="LinksButton" type="Button" parent="Camera3D/CanvasLayer/VBoxContainer" unique_id=168793363]
+custom_minimum_size = Vector2(20, 20)
+custom_maximum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 10
+text = "L"
+
+[node name="RechtsButton" type="Button" parent="Camera3D/CanvasLayer/VBoxContainer" unique_id=1272272550]
+custom_minimum_size = Vector2(20, 20)
+custom_maximum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 10
+text = "R"
+
+[node name="NormalesGlasButton" type="TextureButton" parent="Camera3D/CanvasLayer/VBoxContainer" unique_id=905035222]
+custom_minimum_size = Vector2(20, 20)
+custom_maximum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 10
+texture_normal = ExtResource("2_0tws2")
+texture_pressed = ExtResource("2_0tws2")
+texture_hover = ExtResource("2_0tws2")
+texture_disabled = ExtResource("2_0tws2")
+texture_focused = ExtResource("2_0tws2")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="LavaGlassButton" type="Button" parent="Camera3D/CanvasLayer/VBoxContainer" unique_id=252819360]
+custom_minimum_size = Vector2(20, 20)
+custom_maximum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 10
+text = "LavaGlas
+"
+alignment = 0
+text_overrun_behavior = 1
+
+[node name="BubbleGlassButton" type="TextureButton" parent="Camera3D/CanvasLayer/VBoxContainer" unique_id=1910167654]
+custom_minimum_size = Vector2(20, 20)
+custom_maximum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 10
+texture_normal = ExtResource("3_2ftkj")
+texture_pressed = ExtResource("3_2ftkj")
+texture_hover = ExtResource("3_2ftkj")
+texture_disabled = ExtResource("3_2ftkj")
+texture_focused = ExtResource("3_2ftkj")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="WonkyGlassButton" type="Button" parent="Camera3D/CanvasLayer/VBoxContainer" unique_id=1104581833]
+custom_minimum_size = Vector2(20, 20)
+custom_maximum_size = Vector2(25, 20)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 10
+text = "W"
+
+[node name="GoldfishButton" type="TextureButton" parent="Camera3D/CanvasLayer/VBoxContainer" unique_id=955173626]
+custom_minimum_size = Vector2(20, 20)
+custom_maximum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+texture_normal = ExtResource("22_mc3m6")
+texture_pressed = ExtResource("22_mc3m6")
+texture_hover = ExtResource("22_mc3m6")
+texture_disabled = ExtResource("22_mc3m6")
+texture_focused = ExtResource("22_mc3m6")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="BobaButton" type="TextureButton" parent="Camera3D/CanvasLayer/VBoxContainer" unique_id=1797684474]
+custom_minimum_size = Vector2(20, 20)
+custom_maximum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+texture_normal = ExtResource("23_mc3m6")
+texture_pressed = ExtResource("23_mc3m6")
+texture_hover = ExtResource("23_mc3m6")
+texture_disabled = ExtResource("23_mc3m6")
+texture_focused = ExtResource("23_mc3m6")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="IceCubeButton" type="TextureButton" parent="Camera3D/CanvasLayer/VBoxContainer" unique_id=503122861]
+custom_minimum_size = Vector2(20, 20)
+custom_maximum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 10
+texture_normal = ExtResource("24_a5qmg")
+texture_pressed = ExtResource("24_a5qmg")
+texture_hover = ExtResource("24_a5qmg")
+texture_disabled = ExtResource("24_a5qmg")
+texture_focused = ExtResource("24_a5qmg")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Fluid1Button" type="Button" parent="Camera3D/CanvasLayer/VBoxContainer" unique_id=536763595]
+custom_minimum_size = Vector2(20, 20)
+custom_maximum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 10
+text = "F"
+
+[node name="Fluid2Button" type="TextureButton" parent="Camera3D/CanvasLayer/VBoxContainer" unique_id=1315782279]
+custom_minimum_size = Vector2(20, 20)
+custom_maximum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 10
+texture_normal = ExtResource("24_a5qmg")
+texture_pressed = ExtResource("24_a5qmg")
+texture_hover = ExtResource("24_a5qmg")
+texture_disabled = ExtResource("24_a5qmg")
+texture_focused = ExtResource("24_a5qmg")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Fluid3Button" type="TextureButton" parent="Camera3D/CanvasLayer/VBoxContainer" unique_id=1598705192]
+custom_minimum_size = Vector2(20, 20)
+custom_maximum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 10
+texture_normal = ExtResource("24_a5qmg")
+texture_pressed = ExtResource("24_a5qmg")
+texture_hover = ExtResource("24_a5qmg")
+texture_disabled = ExtResource("24_a5qmg")
+texture_focused = ExtResource("24_a5qmg")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="IceCubeButton12" type="TextureButton" parent="Camera3D/CanvasLayer/VBoxContainer" unique_id=959510360]
+custom_minimum_size = Vector2(20, 20)
+custom_maximum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 10
+texture_normal = ExtResource("24_a5qmg")
+texture_pressed = ExtResource("24_a5qmg")
+texture_hover = ExtResource("24_a5qmg")
+texture_disabled = ExtResource("24_a5qmg")
+texture_focused = ExtResource("24_a5qmg")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="IceCubeButton10" type="TextureButton" parent="Camera3D/CanvasLayer/VBoxContainer" unique_id=126777362]
+custom_minimum_size = Vector2(20, 20)
+custom_maximum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 10
+texture_normal = ExtResource("24_a5qmg")
+texture_pressed = ExtResource("24_a5qmg")
+texture_hover = ExtResource("24_a5qmg")
+texture_disabled = ExtResource("24_a5qmg")
+texture_focused = ExtResource("24_a5qmg")
+ignore_texture_size = true
+stretch_mode = 0
 
 [node name="ConveyerBelt" type="Node3D" parent="." unique_id=1388203742]
 script = ExtResource("2_jxwrd")
@@ -282,10 +474,6 @@ metadata/_custom_type_script = "uid://bj1lct1xewos5"
 [node name="ToppingDispenser" type="Node3D" parent="Dispensers" unique_id=926626877]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 5, -0.26)
 script = ExtResource("14_23wr2")
-topping_meshes = Object(Node3D,"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"physics_interpolation_mode":0,"auto_translate_mode":0,"editor_description":"","transform":Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"script":Resource("res://scripts/liquid.gd"),"fluid_renderer":Object(MultiMeshInstance3D,"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"physics_interpolation_mode":0,"auto_translate_mode":0,"editor_description":"","transform":Transform3D(1.9999999, 0, 0, 0, 1.9999999, 0, 0, 0, 1.9999999, -0.028047323, -0.76642656, -0.30018437),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"layers":1,"sorting_offset":0.0,"sorting_use_aabb_center":true,"material_override":null,"material_overlay":null,"transparency":0.0,"cast_shadow":1,"extra_cull_margin":0.0,"custom_aabb":AABB(0, 0, 0, 0, 0, 0),"lod_bias":1.0,"ignore_occlusion_culling":false,"gi_mode":1,"gi_lightmap_texel_scale":1.0,"visibility_range_begin":0.0,"visibility_range_begin_margin":0.0,"visibility_range_end":0.0,"visibility_range_end_margin":0.0,"visibility_range_fade_mode":0,"multimesh":null,"script":Resource("res://addons/godot-rapier3d/fluid_3d_renderer.gd"),"fluid":Object(Fluid3D,"debug_draw":false,"density":10.0,"lifetime":0.0,"effects":Array[Resource]([null, null, null]),"points":PackedVector3Array(0, 0, 0, 0.05, 0, 0, 0.1, 0, 0, 0.15, 0, 0, 0.2, 0, 0, 0, 0.05, 0, 0.05, 0.05, 0, 0.1, 0.05, 0, 0.15, 0.05, 0, 0.2, 0.05, 0, 0, 0.1, 0, 0.05, 0.1, 0, 0.1, 0.1, 0, 0.15, 0.1, 0, 0.2, 0.1, 0, 0, 0.15, 0, 0.05, 0.15, 0, 0.1, 0.15, 0, 0.15, 0.15, 0, 0.2, 0.15, 0, 0, 0.2, 0, 0.05, 0.2, 0, 0.1, 0.2, 0, 0.15, 0.2, 0, 0.2, 0.2, 0, 0, 0.25, 0, 0.05, 0.25, 0, 0.1, 0.25, 0, 0.15, 0.25, 0, 0.2, 0.25, 0, 0, 0.3, 0, 0.05, 0.3, 0, 0.1, 0.3, 0, 0.15, 0.3, 0, 0.2, 0.3, 0, 0, 0.35, 0, 0.05, 0.35, 0, 0.1, 0.35, 0, 0.15, 0.35, 0, 0.2, 0.35, 0, 0, 0.4, 0, 0.05, 0.4, 0, 0.1, 0.4, 0, 0.15, 0.4, 0, 0.2, 0.4, 0, 0, 0.45000002, 0, 0.05, 0.45000002, 0, 0.1, 0.45000002, 0, 0.15, 0.45000002, 0, 0.2, 0.45000002, 0, 0, 0.5, 0, 0.05, 0.5, 0, 0.1, 0.5, 0, 0.15, 0.5, 0, 0.2, 0.5, 0, 0, 0.55, 0, 0.05, 0.55, 0, 0.1, 0.55, 0, 0.15, 0.55, 0, 0.2, 0.55, 0, 0, 0.6, 0, 0.05, 0.6, 0, 0.1, 0.6, 0, 0.15, 0.6, 0, 0.2, 0.6, 0, 0, 0.65000004, 0, 0.05, 0.65000004, 0, 0.1, 0.65000004, 0, 0.15, 0.65000004, 0, 0.2, 0.65000004, 0, 0, 0.7, 0, 0.05, 0.7, 0, 0.1, 0.7, 0, 0.15, 0.7, 0, 0.2, 0.7, 0, 0, 0.75, 0, 0.05, 0.75, 0, 0.1, 0.75, 0, 0.15, 0.75, 0, 0.2, 0.75, 0, 0, 0.8, 0, 0.05, 0.8, 0, 0.1, 0.8, 0, 0.15, 0.8, 0, 0.2, 0.8, 0, 0, 0.85, 0, 0.05, 0.85, 0, 0.1, 0.85, 0, 0.15, 0.85, 0, 0.2, 0.85, 0, 0, 0.90000004, 0, 0.05, 0.90000004, 0, 0.1, 0.90000004, 0, 0.15, 0.90000004, 0, 0.2, 0.90000004, 0, 0, 0.95, 0, 0.05, 0.95, 0, 0.1, 0.95, 0, 0.15, 0.95, 0, 0.2, 0.95, 0, 0, 0, 0.05, 0.05, 0, 0.05, 0.1, 0, 0.05, 0.15, 0, 0.05, 0.2, 0, 0.05, 0, 0.05, 0.05, 0.05, 0.05, 0.05, 0.1, 0.05, 0.05, 0.15, 0.05, 0.05, 0.2, 0.05, 0.05, 0, 0.1, 0.05, 0.05, 0.1, 0.05, 0.1, 0.1, 0.05, 0.15, 0.1, 0.05, 0.2, 0.1, 0.05, 0, 0.15, 0.05, 0.05, 0.15, 0.05, 0.1, 0.15, 0.05, 0.15, 0.15, 0.05, 0.2, 0.15, 0.05, 0, 0.2, 0.05, 0.05, 0.2, 0.05, 0.1, 0.2, 0.05, 0.15, 0.2, 0.05, 0.2, 0.2, 0.05, 0, 0.25, 0.05, 0.05, 0.25, 0.05, 0.1, 0.25, 0.05, 0.15, 0.25, 0.05, 0.2, 0.25, 0.05, 0, 0.3, 0.05, 0.05, 0.3, 0.05, 0.1, 0.3, 0.05, 0.15, 0.3, 0.05, 0.2, 0.3, 0.05, 0, 0.35, 0.05, 0.05, 0.35, 0.05, 0.1, 0.35, 0.05, 0.15, 0.35, 0.05, 0.2, 0.35, 0.05, 0, 0.4, 0.05, 0.05, 0.4, 0.05, 0.1, 0.4, 0.05, 0.15, 0.4, 0.05, 0.2, 0.4, 0.05, 0, 0.45000002, 0.05, 0.05, 0.45000002, 0.05, 0.1, 0.45000002, 0.05, 0.15, 0.45000002, 0.05, 0.2, 0.45000002, 0.05, 0, 0.5, 0.05, 0.05, 0.5, 0.05, 0.1, 0.5, 0.05, 0.15, 0.5, 0.05, 0.2, 0.5, 0.05, 0, 0.55, 0.05, 0.05, 0.55, 0.05, 0.1, 0.55, 0.05, 0.15, 0.55, 0.05, 0.2, 0.55, 0.05, 0, 0.6, 0.05, 0.05, 0.6, 0.05, 0.1, 0.6, 0.05, 0.15, 0.6, 0.05, 0.2, 0.6, 0.05, 0, 0.65000004, 0.05, 0.05, 0.65000004, 0.05, 0.1, 0.65000004, 0.05, 0.15, 0.65000004, 0.05, 0.2, 0.65000004, 0.05, 0, 0.7, 0.05, 0.05, 0.7, 0.05, 0.1, 0.7, 0.05, 0.15, 0.7, 0.05, 0.2, 0.7, 0.05, 0, 0.75, 0.05, 0.05, 0.75, 0.05, 0.1, 0.75, 0.05, 0.15, 0.75, 0.05, 0.2, 0.75, 0.05, 0, 0.8, 0.05, 0.05, 0.8, 0.05, 0.1, 0.8, 0.05, 0.15, 0.8, 0.05, 0.2, 0.8, 0.05, 0, 0.85, 0.05, 0.05, 0.85, 0.05, 0.1, 0.85, 0.05, 0.15, 0.85, 0.05, 0.2, 0.85, 0.05, 0, 0.90000004, 0.05, 0.05, 0.90000004, 0.05, 0.1, 0.90000004, 0.05, 0.15, 0.90000004, 0.05, 0.2, 0.90000004, 0.05, 0, 0.95, 0.05, 0.05, 0.95, 0.05, 0.1, 0.95, 0.05, 0.15, 0.95, 0.05, 0.2, 0.95, 0.05, 0, 0, 0.1, 0.05, 0, 0.1, 0.1, 0, 0.1, 0.15, 0, 0.1, 0.2, 0, 0.1, 0, 0.05, 0.1, 0.05, 0.05, 0.1, 0.1, 0.05, 0.1, 0.15, 0.05, 0.1, 0.2, 0.05, 0.1, 0, 0.1, 0.1, 0.05, 0.1, 0.1, 0.1, 0.1, 0.1, 0.15, 0.1, 0.1, 0.2, 0.1, 0.1, 0, 0.15, 0.1, 0.05, 0.15, 0.1, 0.1, 0.15, 0.1, 0.15, 0.15, 0.1, 0.2, 0.15, 0.1, 0, 0.2, 0.1, 0.05, 0.2, 0.1, 0.1, 0.2, 0.1, 0.15, 0.2, 0.1, 0.2, 0.2, 0.1, 0, 0.25, 0.1, 0.05, 0.25, 0.1, 0.1, 0.25, 0.1, 0.15, 0.25, 0.1, 0.2, 0.25, 0.1, 0, 0.3, 0.1, 0.05, 0.3, 0.1, 0.1, 0.3, 0.1, 0.15, 0.3, 0.1, 0.2, 0.3, 0.1, 0, 0.35, 0.1, 0.05, 0.35, 0.1, 0.1, 0.35, 0.1, 0.15, 0.35, 0.1, 0.2, 0.35, 0.1, 0, 0.4, 0.1, 0.05, 0.4, 0.1, 0.1, 0.4, 0.1, 0.15, 0.4, 0.1, 0.2, 0.4, 0.1, 0, 0.45000002, 0.1, 0.05, 0.45000002, 0.1, 0.1, 0.45000002, 0.1, 0.15, 0.45000002, 0.1, 0.2, 0.45000002, 0.1, 0, 0.5, 0.1, 0.05, 0.5, 0.1, 0.1, 0.5, 0.1, 0.15, 0.5, 0.1, 0.2, 0.5, 0.1, 0, 0.55, 0.1, 0.05, 0.55, 0.1, 0.1, 0.55, 0.1, 0.15, 0.55, 0.1, 0.2, 0.55, 0.1, 0, 0.6, 0.1, 0.05, 0.6, 0.1, 0.1, 0.6, 0.1, 0.15, 0.6, 0.1, 0.2, 0.6, 0.1, 0, 0.65000004, 0.1, 0.05, 0.65000004, 0.1, 0.1, 0.65000004, 0.1, 0.15, 0.65000004, 0.1, 0.2, 0.65000004, 0.1, 0, 0.7, 0.1, 0.05, 0.7, 0.1, 0.1, 0.7, 0.1, 0.15, 0.7, 0.1, 0.2, 0.7, 0.1, 0, 0.75, 0.1, 0.05, 0.75, 0.1, 0.1, 0.75, 0.1, 0.15, 0.75, 0.1, 0.2, 0.75, 0.1, 0, 0.8, 0.1, 0.05, 0.8, 0.1, 0.1, 0.8, 0.1, 0.15, 0.8, 0.1, 0.2, 0.8, 0.1, 0, 0.85, 0.1, 0.05, 0.85, 0.1, 0.1, 0.85, 0.1, 0.15, 0.85, 0.1, 0.2, 0.85, 0.1, 0, 0.90000004, 0.1, 0.05, 0.90000004, 0.1, 0.1, 0.90000004, 0.1, 0.15, 0.90000004, 0.1, 0.2, 0.90000004, 0.1, 0, 0.95, 0.1, 0.05, 0.95, 0.1, 0.1, 0.95, 0.1, 0.15, 0.95, 0.1, 0.2, 0.95, 0.1, 0, 0, 0.15, 0.05, 0, 0.15, 0.1, 0, 0.15, 0.15, 0, 0.15, 0.2, 0, 0.15, 0, 0.05, 0.15, 0.05, 0.05, 0.15, 0.1, 0.05, 0.15, 0.15, 0.05, 0.15, 0.2, 0.05, 0.15, 0, 0.1, 0.15, 0.05, 0.1, 0.15, 0.1, 0.1, 0.15, 0.15, 0.1, 0.15, 0.2, 0.1, 0.15, 0, 0.15, 0.15, 0.05, 0.15, 0.15, 0.1, 0.15, 0.15, 0.15, 0.15, 0.15, 0.2, 0.15, 0.15, 0, 0.2, 0.15, 0.05, 0.2, 0.15, 0.1, 0.2, 0.15, 0.15, 0.2, 0.15, 0.2, 0.2, 0.15, 0, 0.25, 0.15, 0.05, 0.25, 0.15, 0.1, 0.25, 0.15, 0.15, 0.25, 0.15, 0.2, 0.25, 0.15, 0, 0.3, 0.15, 0.05, 0.3, 0.15, 0.1, 0.3, 0.15, 0.15, 0.3, 0.15, 0.2, 0.3, 0.15, 0, 0.35, 0.15, 0.05, 0.35, 0.15, 0.1, 0.35, 0.15, 0.15, 0.35, 0.15, 0.2, 0.35, 0.15, 0, 0.4, 0.15, 0.05, 0.4, 0.15, 0.1, 0.4, 0.15, 0.15, 0.4, 0.15, 0.2, 0.4, 0.15, 0, 0.45000002, 0.15, 0.05, 0.45000002, 0.15, 0.1, 0.45000002, 0.15, 0.15, 0.45000002, 0.15, 0.2, 0.45000002, 0.15, 0, 0.5, 0.15, 0.05, 0.5, 0.15, 0.1, 0.5, 0.15, 0.15, 0.5, 0.15, 0.2, 0.5, 0.15, 0, 0.55, 0.15, 0.05, 0.55, 0.15, 0.1, 0.55, 0.15, 0.15, 0.55, 0.15, 0.2, 0.55, 0.15, 0, 0.6, 0.15, 0.05, 0.6, 0.15, 0.1, 0.6, 0.15, 0.15, 0.6, 0.15, 0.2, 0.6, 0.15, 0, 0.65000004, 0.15, 0.05, 0.65000004, 0.15, 0.1, 0.65000004, 0.15, 0.15, 0.65000004, 0.15, 0.2, 0.65000004, 0.15, 0, 0.7, 0.15, 0.05, 0.7, 0.15, 0.1, 0.7, 0.15, 0.15, 0.7, 0.15, 0.2, 0.7, 0.15, 0, 0.75, 0.15, 0.05, 0.75, 0.15, 0.1, 0.75, 0.15, 0.15, 0.75, 0.15, 0.2, 0.75, 0.15, 0, 0.8, 0.15, 0.05, 0.8, 0.15, 0.1, 0.8, 0.15, 0.15, 0.8, 0.15, 0.2, 0.8, 0.15, 0, 0.85, 0.15, 0.05, 0.85, 0.15, 0.1, 0.85, 0.15, 0.15, 0.85, 0.15, 0.2, 0.85, 0.15, 0, 0.90000004, 0.15, 0.05, 0.90000004, 0.15, 0.1, 0.90000004, 0.15, 0.15, 0.90000004, 0.15, 0.2, 0.90000004, 0.15, 0, 0.95, 0.15, 0.05, 0.95, 0.15, 0.1, 0.95, 0.15, 0.15, 0.95, 0.15, 0.2, 0.95, 0.15, 0, 0, 0.2, 0.05, 0, 0.2, 0.1, 0, 0.2, 0.15, 0, 0.2, 0.2, 0, 0.2, 0, 0.05, 0.2, 0.05, 0.05, 0.2, 0.1, 0.05, 0.2, 0.15, 0.05, 0.2, 0.2, 0.05, 0.2, 0, 0.1, 0.2, 0.05, 0.1, 0.2, 0.1, 0.1, 0.2, 0.15, 0.1, 0.2, 0.2, 0.1, 0.2, 0, 0.15, 0.2, 0.05, 0.15, 0.2, 0.1, 0.15, 0.2, 0.15, 0.15, 0.2, 0.2, 0.15, 0.2, 0, 0.2, 0.2, 0.05, 0.2, 0.2, 0.1, 0.2, 0.2, 0.15, 0.2, 0.2, 0.2, 0.2, 0.2, 0, 0.25, 0.2, 0.05, 0.25, 0.2, 0.1, 0.25, 0.2, 0.15, 0.25, 0.2, 0.2, 0.25, 0.2, 0, 0.3, 0.2, 0.05, 0.3, 0.2, 0.1, 0.3, 0.2, 0.15, 0.3, 0.2, 0.2, 0.3, 0.2, 0, 0.35, 0.2, 0.05, 0.35, 0.2, 0.1, 0.35, 0.2, 0.15, 0.35, 0.2, 0.2, 0.35, 0.2, 0, 0.4, 0.2, 0.05, 0.4, 0.2, 0.1, 0.4, 0.2, 0.15, 0.4, 0.2, 0.2, 0.4, 0.2, 0, 0.45000002, 0.2, 0.05, 0.45000002, 0.2, 0.1, 0.45000002, 0.2, 0.15, 0.45000002, 0.2, 0.2, 0.45000002, 0.2, 0, 0.5, 0.2, 0.05, 0.5, 0.2, 0.1, 0.5, 0.2, 0.15, 0.5, 0.2, 0.2, 0.5, 0.2, 0, 0.55, 0.2, 0.05, 0.55, 0.2, 0.1, 0.55, 0.2, 0.15, 0.55, 0.2, 0.2, 0.55, 0.2, 0, 0.6, 0.2, 0.05, 0.6, 0.2, 0.1, 0.6, 0.2, 0.15, 0.6, 0.2, 0.2, 0.6, 0.2, 0, 0.65000004, 0.2, 0.05, 0.65000004, 0.2, 0.1, 0.65000004, 0.2, 0.15, 0.65000004, 0.2, 0.2, 0.65000004, 0.2, 0, 0.7, 0.2, 0.05, 0.7, 0.2, 0.1, 0.7, 0.2, 0.15, 0.7, 0.2, 0.2, 0.7, 0.2, 0, 0.75, 0.2, 0.05, 0.75, 0.2, 0.1, 0.75, 0.2, 0.15, 0.75, 0.2, 0.2, 0.75, 0.2, 0, 0.8, 0.2, 0.05, 0.8, 0.2, 0.1, 0.8, 0.2, 0.15, 0.8, 0.2, 0.2, 0.8, 0.2, 0, 0.85, 0.2, 0.05, 0.85, 0.2, 0.1, 0.85, 0.2, 0.15, 0.85, 0.2, 0.2, 0.85, 0.2, 0, 0.90000004, 0.2, 0.05, 0.90000004, 0.2, 0.1, 0.90000004, 0.2, 0.15, 0.90000004, 0.2, 0.2, 0.90000004, 0.2, 0, 0.95, 0.2, 0.05, 0.95, 0.2, 0.1, 0.95, 0.2, 0.15, 0.95, 0.2, 0.2, 0.95, 0.2),"collision_layer":1,"collision_mask":1,"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"physics_interpolation_mode":0,"auto_translate_mode":0,"editor_description":"","transform":Transform3D(1.9999999, 0, 0, 0, 1.9999999, 0, 0, 0, 1.9999999, -0.028047249, -0.76642656, -0.30018434),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"script":Resource("res://addons/godot-rapier3d/fluid_3d_box.gd"),"height":20,"width":5,"depth":5)
-,"metadata/_custom_type_script":"uid://b5of3xx28r0r3")
-)
-
 gold_fish = ExtResource("14_3j2fx")
 boba = SubResource("SphereMesh_x4pa0")
 icecubes = ExtResource("16_dynfe")
@@ -299,6 +487,13 @@ metadata/_custom_type_script = "uid://bj1lct1xewos5"
 [node name="FrutigerPerson" parent="." unique_id=1934764386 instance=ExtResource("18_katsu")]
 transform = Transform3D(-0.0012773708, 0, 0.99999917, 0, 1, 0, -0.99999917, 0, -0.0012773708, 0.09910327, 2.4449487, 1.9679179)
 
+[connection signal="pressed" from="Camera3D/CanvasLayer/VBoxContainer/NormalesGlasButton" to="Dispensers/GlasDispenser" method="_on_normales_glas_button_pressed"]
+[connection signal="pressed" from="Camera3D/CanvasLayer/VBoxContainer/LavaGlassButton" to="Dispensers/GlasDispenser" method="_on_lava_glass_button_pressed"]
+[connection signal="pressed" from="Camera3D/CanvasLayer/VBoxContainer/BubbleGlassButton" to="Dispensers/GlasDispenser" method="_on_bubble_glass_button_pressed"]
+[connection signal="pressed" from="Camera3D/CanvasLayer/VBoxContainer/WonkyGlassButton" to="Dispensers/GlasDispenser" method="_on_wonky_glass_button_pressed"]
+[connection signal="pressed" from="Camera3D/CanvasLayer/VBoxContainer/GoldfishButton" to="Dispensers/ToppingDispenser" method="_on_goldfish_button_pressed"]
+[connection signal="pressed" from="Camera3D/CanvasLayer/VBoxContainer/BobaButton" to="Dispensers/ToppingDispenser" method="_on_boba_button_pressed"]
+[connection signal="pressed" from="Camera3D/CanvasLayer/VBoxContainer/IceCubeButton" to="Dispensers/ToppingDispenser" method="_on_ice_cube_button_pressed"]
 [connection signal="body_entered" from="Stations/GlasStation/Area3D" to="." method="GlasStationEntered"]
 [connection signal="body_entered" from="Stations/FluidStation/Area3D" to="." method="FluidStationEntered"]
 [connection signal="body_entered" from="Stations/MixerStation/Area3D" to="." method="MixerStationEntered"]

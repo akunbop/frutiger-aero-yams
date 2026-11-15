@@ -33,24 +33,42 @@ func set_dispenser_type(new_type : GlasType):
 			dispense()
 
 
-func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed("test4"):
-		print("dispensing bubble glas")
-		set_dispenser_type(GlasType.BUBBLE)
-
-	elif event.is_action_pressed("test5"):
-		print("dispensing lavalamp glas")
-		set_dispenser_type(GlasType.LAVALAMP)
-
-	elif event.is_action_pressed("test6"):
-		print("dispensing normal glas")
-		set_dispenser_type(GlasType.NORMAL)
-
-	elif event.is_action_pressed("test7"):
-		print("dispensing wonky glas")
-		set_dispenser_type(GlasType.WONKY)
+#func _unhandled_input(event: InputEvent) -> void:
+	#if event.is_action_pressed("test4"):
+		#print("dispensing bubble glas")
+		#set_dispenser_type(GlasType.BUBBLE)
+#
+	#elif event.is_action_pressed("test5"):
+		#print("dispensing lavalamp glas")
+		#set_dispenser_type(GlasType.LAVALAMP)
+#
+	#elif event.is_action_pressed("test6"):
+		#print("dispensing normal glas")
+		#set_dispenser_type(GlasType.NORMAL)
+#
+	#elif event.is_action_pressed("test7"):
+		#print("dispensing wonky glas")
+		#set_dispenser_type(GlasType.WONKY)
 
 func dispense():
 	super.dispense()
 	var instance = current_glas.instantiate()
 	add_child(instance)
+
+
+func _on_normales_glas_button_pressed() -> void:
+	print("dispensing normal glas")
+	set_dispenser_type(GlasType.NORMAL)
+
+func _on_lava_glass_button_pressed() -> void:
+	print("dispensing lavalamp glas")
+	set_dispenser_type(GlasType.LAVALAMP)
+
+func _on_bubble_glass_button_pressed() -> void:
+	print("dispensing bubble glas")
+	set_dispenser_type(GlasType.BUBBLE)
+
+
+func _on_wonky_glass_button_pressed() -> void:
+	print("dispensing wonky glas")
+	set_dispenser_type(GlasType.WONKY)
